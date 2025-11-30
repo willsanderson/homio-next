@@ -2,6 +2,14 @@
 
 A modern mobile-friendly fork of the original [Homio](https://github.com/iamtherufus/Homio) dashboard by iamtherufus for Home Assistant, featuring light and dark mode, redesigned cards, new custom badges, and media integration.
 
+## Desktop View
+
+<img width="1000" height="625" alt="desktop-home" src="https://github.com/user-attachments/assets/2ff102c6-d050-457c-9e2c-cd3ece98d6e4" />
+<img width="1000" height="625" alt="desktop-living-room" src="https://github.com/user-attachments/assets/27734f60-f907-4b19-9a75-5c3027bd072f" />
+<img width="1000" height="625" alt="desktop-kitchen" src="https://github.com/user-attachments/assets/2559559b-a94a-4630-bf20-ae222ff36e59" />
+<img width="1000" height="625" alt="desktop-bedroom" src="https://github.com/user-attachments/assets/8bdbe030-5c3a-4f9d-88a9-f12026897c03" />
+
+
 ---
 
 ## Based on Homio
@@ -37,6 +45,11 @@ Homio-Next adds new features and changes including:
   - Media badge with dynamic background
 
 Under the hood it’s still YAML files you can read, copy, and modify. This repo just collects my version into a reusable package.
+
+## Light/Dark Mode
+
+<img width="1000" height="625" alt="desktop-bedroom" src="https://github.com/user-attachments/assets/5b936d0f-49cb-4df0-ab53-46f0854cf75b" />
+<img width="1000" height="625" alt="desktop-bedroom-dark" src="https://github.com/user-attachments/assets/cf0a69f1-c012-4e63-bd6f-5ea5fa3f8d39" />
 
 ---
 
