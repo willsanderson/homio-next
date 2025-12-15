@@ -100,8 +100,8 @@ Example layout:
     └── homio_helpers.yaml        # Helpers required by the dashboard
 └── www/
     └── homio/
-        ├── icons/                # Optional: UI icons
-        └── images/               # Optional: room/background images
+        ├── icons/                # UI icons
+        └── images/               # Room/Background images
 
 ```
 
