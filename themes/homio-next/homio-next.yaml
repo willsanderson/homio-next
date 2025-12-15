@@ -6,8 +6,8 @@ homio-next:
       app-header-background-color: rgba(76, 80, 84, 0.3)
       ha-card-background: rgba(200,200,200,0.08)
       ha-card-background-active: rgba(255,255,255,0.3)
-      thermostat-card-off: rgba(0,0,0,0.1)
-      thermostat-card-on: rgba(255,255,255,0.13)
+      thermostat-card-off: rgba(0,0,0,.08)
+      thermostat-card-on: rgba(255,255,255,0.1)
       app-theme-color: rgb(0, 0, 0)
       ha-card-box-shadow: none
       button-card-box-shadow: var(--ha-shadow-light)
