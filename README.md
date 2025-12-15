@@ -85,7 +85,7 @@ Example layout:
 ```text
 /config
 └── dashboards/
-    └── homio-next/
+    └── homio/
         └── homio.yaml            # Main Homio-Next dashboard
 └── dashboards/templates/includes/
     ├── homio_screen_layout.yaml
@@ -99,7 +99,7 @@ Example layout:
 └── packages/
     └── homio_helpers.yaml        # Helpers required by the dashboard
 └── www/
-    └── homio-next/
+    └── homio/
         ├── icons/                # Optional: UI icons
         └── images/               # Optional: room/background images
 
@@ -127,12 +127,12 @@ You don’t have to install the original Homio dashboard itself, but the environ
 
 From this repo, copy the following into your Home Assistant `/config` directory:
 
-- `dashboards/homio-next/` → `/config/dashboards/homio-next/`
+- `dashboards/homio/` → `/config/dashboards/homio/`
 - `dashboards/templates/includes/` → `/config/dashboards/templates/includes/`  
   (merge with your existing templates folder if you already have one)
 - `themes/homio-next/` → `/config/themes/homio-next/`
 - `packages/homio_helpers.yaml` → `/config/packages/`
-- `www/homio-next/` → `/config/www/homio-next/`  
+- `www/homio/` → `/config/www/homio/`  
 
 Restart Home Assistant or reload themes/resources as needed.
 
@@ -146,15 +146,15 @@ In `configuration.yaml` add the following:
 lovelace:
   mode: storage
   dashboards:
-    dashboard-homio-next:
+    dashboard-homio:
       mode: yaml
       title: "Homio"
       icon: mdi:home
       show_in_sidebar: true
-      filename: dashboards/homio-next/homio.yaml
+      filename: dashboards/homio/homio.yaml
 ```
 
-Restart Home Assistant, then refresh your browser and open **Homio Next** from the sidebar.
+Restart Home Assistant, then refresh your browser and open **Homio** from the sidebar.
 
 ---
 
