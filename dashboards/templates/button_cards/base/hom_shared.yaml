@@ -1,5 +1,5 @@
 # Shared Styles
-homio_shared:
+hom_shared:
   extra_styles: |
     :host::before{
       content: "";
@@ -9,10 +9,10 @@ homio_shared:
       opacity: 0;
       pointer-events: none;
       background-image:
-        url("/local/homio/rooms/home-demo.jpg"),
-        url("/local/homio/rooms/livingroom-demo.jpg"),
-        url("/local/homio/rooms/kitchen-demo.jpg"),
-        url("/local/homio/rooms/bedroom-demo.jpg");
+        url("/local/hom/rooms/home-demo.jpg"),
+        url("/local/hom/rooms/livingroom-demo.jpg"),
+        url("/local/hom/rooms/kitchen-demo.jpg"),
+        url("/local/hom/rooms/bedroom-demo.jpg");
       background-repeat: no-repeat;
       background-size: cover;
     }
@@ -21,11 +21,11 @@ homio_shared:
       position: relative;
       z-index: 0;
       --hero-gutter: var(--content-rail,
-                      var(--homio-rail-left,
+                      var(--hom-rail-left,
                       var(--page-gutter, 8vw)));
       --hero-top: var(--header-top-desktop, clamp(220px, 26vh, 340px));
       --row-left-pad: 0px;
-      --homio-hover-filter: none !important;
+      --hom-hover-filter: none !important;
       --hero-temp-font-size: var(--hero-temp-font-size-desktop, 15px);
       --hero-temp-font-weight: 600;
       --hero-temp-letter-spacing: 0.04em;
@@ -132,7 +132,7 @@ homio_shared:
         --hero-temp-margin-bottom: var(--hero-temp-margin-bottom-mobile, 8px);
         --tiles-pad-bottom: calc(130px + env(safe-area-inset-bottom));
         --row-left-pad: 0px;
-        --hero-gutter: var(--homio-rail-left, var(--page-gutter-mobile, 10px));
+        --hero-gutter: var(--hom-rail-left, var(--page-gutter-mobile, 10px));
         --menu-icon-offset: var(--menu-icon-offset-mobile, 20px);
         --menu-icon-gutter: var(--page-gutter-mobile, 14px);
       }

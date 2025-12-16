@@ -1,4 +1,4 @@
-homio-next:
+hom:
   modes:
     light:
       primary-background-color: rgb(50, 50, 50)
@@ -11,30 +11,30 @@ homio-next:
       app-theme-color: rgb(0, 0, 0)
       ha-card-box-shadow: none
       button-card-box-shadow: var(--ha-shadow-light)
-      homio-nav-bg: rgba(255,255,255,0.11)
-      homio-nav-border: rgba(255,255,255,0.1)
-      homio-nav-shadow: >
+      hom-nav-bg: rgba(255,255,255,0.11)
+      hom-nav-border: rgba(255,255,255,0.1)
+      hom-nav-shadow: >
         inset 3px 3px 5px -5px rgba(255,255,255,0.08),
         inset -3px -3px 5px -5px rgba(255,255,255,0.08),
         inset 0 0 3px -1px rgba(255,255,255,0.1),
         0 14px 22px rgba(0,0,0,0.08)
-      homio-nav-inactive-opacity: .7
-      homio-nav-icon: rgba(255,255,255,.7)
-      homio-nav-icon-active: rgba(255,255,255,1)
-      homio-nav-active-fill: rgba(255,255,255,0.2)
-      homio-nav-pill-shadow: inset 0 0 1px rgba(255,255,255,0.5)
-      homio-nav-blur: blur(10px)
-      homio-nav-fade: |
+      hom-nav-inactive-opacity: .7
+      hom-nav-icon: rgba(255,255,255,.7)
+      hom-nav-icon-active: rgba(255,255,255,1)
+      hom-nav-active-fill: rgba(255,255,255,0.2)
+      hom-nav-pill-shadow: inset 0 0 1px rgba(255,255,255,0.5)
+      hom-nav-blur: blur(10px)
+      hom-nav-fade: |
         linear-gradient(
           to top,
           rgba(0,0,0,0.60) 0%,
           rgba(0,0,0,0.35) 30%,
           rgba(0,0,0,0.0) 65%
         )
-      homio-slider-track: rgba(255,255,255,0.22)
-      homio-slider-progress: rgba(255,255,255,0.95)
-      homio-slider-thumb: "#ffffff"
-      homio-slider-shadow: 0 2px 10px rgba(0,0,0,.18)
+      hom-slider-track: rgba(255,255,255,0.22)
+      hom-slider-progress: rgba(255,255,255,0.95)
+      hom-slider-thumb: "#ffffff"
+      hom-slider-shadow: 0 2px 10px rgba(0,0,0,.18)
       hero-img-filter: saturate(1.02) brightness(.985)
       hero-tint-top: rgba(56,56,56,0.65)
       hero-tint-mid: rgba(53,53,53,0.60)
@@ -59,28 +59,28 @@ homio-next:
       ha-card-box-shadow: none
       button-card-box-shadow: var(--ha-shadow-dark)
       button-card-box-shadow-active: var(--ha-shadow-dark-active)
-      homio-nav-bg: rgba(0,0,0,.3)
-      homio-nav-border: rgba(240,240,240,0.11)
-      homio-nav-inactive-opacity: .6
-      homio-nav-icon: rgba(240,240,240,.8)
-      homio-nav-icon-active: rgba(255,255,255,1)
-      homio-nav-shadow: >
+      hom-nav-bg: rgba(0,0,0,.3)
+      hom-nav-border: rgba(240,240,240,0.11)
+      hom-nav-inactive-opacity: .6
+      hom-nav-icon: rgba(240,240,240,.8)
+      hom-nav-icon-active: rgba(255,255,255,1)
+      hom-nav-shadow: >
         inset 0 10px 14px -14px rgba(0,0,0,0.08),
         inset 0 -10px 14px -14px rgba(0,0,0,0.08)
-      homio-nav-active-fill: rgba(255,255,255,0.2)
-      homio-nav-pill-shadow: inset 0 0 1px rgba(255,255,255,0.14)
-      homio-nav-blur: blur(12px)
-      homio-nav-fade: |
+      hom-nav-active-fill: rgba(255,255,255,0.2)
+      hom-nav-pill-shadow: inset 0 0 1px rgba(255,255,255,0.14)
+      hom-nav-blur: blur(12px)
+      hom-nav-fade: |
         linear-gradient(
           to top,
           rgba(0,0,0,0.60) 0%,
           rgba(0,0,0,0.35) 30%,
           rgba(0,0,0,0.0) 65%
         )
-      homio-slider-track: rgba(200,200,200,0.22)
-      homio-slider-progress: rgba(200,200,200,0.95)
-      homio-slider-thumb: "#ffffff"
-      homio-slider-shadow: 0 2px 12px rgba(0,0,0,.34)
+      hom-slider-track: rgba(200,200,200,0.22)
+      hom-slider-progress: rgba(200,200,200,0.95)
+      hom-slider-thumb: "#ffffff"
+      hom-slider-shadow: 0 2px 12px rgba(0,0,0,.34)
       hero-img-filter: saturate(1.02) brightness(0.98)
       hero-tint-top: rgba(50,50,50,0.65)
       hero-tint-mid: rgba(50,50,50,0.60)
@@ -162,43 +162,43 @@ homio-next:
   ha-color-on-primary-normal: var(--primary-color)
 
   # Entity Layout
-  homio-entity-height-desktop: 180px
-  homio-entity-height-mobile: 120px
-  homio-entity-padding-desktop: 40px
-  homio-entity-padding-mobile: 20px
-  homio-entity-name-font-desktop: 18px
-  homio-entity-state-font-desktop: 15px
+  hom-entity-height-desktop: 180px
+  hom-entity-height-mobile: 120px
+  hom-entity-padding-desktop: 40px
+  hom-entity-padding-mobile: 20px
+  hom-entity-name-font-desktop: 18px
+  hom-entity-state-font-desktop: 15px
 
   # - Use Preset A for 1-row carousel
   # - Use Preset B for 2-row grid
   # (only one preset block should be uncommented at a time)
 
   # Preset A (1-Row Carousel)
-  homio-entity-rows-desktop: repeat(1, auto)
-  homio-entity-col-width-desktop: 280px
-  homio-entity-justify-desktop: flex-start
-  homio-entity-right-inset-desktop: 0px
-  homio-entity-bottom-desktop: 40px
-  homio-entity-shadow-pad-right-desktop: 0px
-  homio-entity-overflow-y-desktop: hidden
+  hom-entity-rows-desktop: repeat(1, auto)
+  hom-entity-col-width-desktop: 280px
+  hom-entity-justify-desktop: flex-start
+  hom-entity-right-inset-desktop: 0px
+  hom-entity-bottom-desktop: 40px
+  hom-entity-shadow-pad-right-desktop: 0px
+  hom-entity-overflow-y-desktop: hidden
 
   # Preset B (2-Row Grid)
-  # homio-entity-rows-desktop: repeat(2, auto)
-  # homio-entity-col-width-desktop: 250px
-  # homio-entity-justify-desktop: center
-  # homio-entity-right-inset-desktop: var(--page-gutter, 8vw)
-  # homio-entity-bottom-desktop: 30px
-  # homio-entity-shadow-pad-right-desktop: 16px
-  # homio-entity-overflow-y-desktop: visible
+  # hom-entity-rows-desktop: repeat(2, auto)
+  # hom-entity-col-width-desktop: 250px
+  # hom-entity-justify-desktop: center
+  # hom-entity-right-inset-desktop: var(--page-gutter, 8vw)
+  # hom-entity-bottom-desktop: 30px
+  # hom-entity-shadow-pad-right-desktop: 16px
+  # hom-entity-overflow-y-desktop: visible
 
   # Entity Variables
-  homio-entity-active: rgba(255,255,255,1)
-  homio-entity-inactive: rgba(255,255,255,.75)
-  homio-entity-picture-inactive-opacity: .75
-  homio-entity-picture-active-opacity: 1
-  homio-entity-picture-inactive-filter: brightness(.75) saturate(.9)
-  homio-entity-picture-active-filter: none
-  homio-entity-text-shadow: 0 0 3px rgba(0, 0, 0, 0.15)
+  hom-entity-active: rgba(255,255,255,1)
+  hom-entity-inactive: rgba(255,255,255,.75)
+  hom-entity-picture-inactive-opacity: .75
+  hom-entity-picture-active-opacity: 1
+  hom-entity-picture-inactive-filter: brightness(.75) saturate(.9)
+  hom-entity-picture-active-filter: none
+  hom-entity-text-shadow: 0 0 3px rgba(0, 0, 0, 0.15)
 
   # Temperature Formatting
   hero-temp-font-size-desktop: 18px
@@ -318,7 +318,7 @@ homio-next:
   clear-background-color: var(--ha-card-background)
   
   # Card Mod
-  card-mod-theme: "homio-next"
+  card-mod-theme: "hom"
 
   card-mod-root-yaml: |
     .: |
@@ -336,23 +336,23 @@ homio-next:
 
         :root {
           --page-gutter: var(--page-gutter-desktop);
-          --homio-rail-left: var(--page-gutter-desktop);
-          --content-rail: calc(var(--homio-rail-left) + var(--homio-entity-padding-desktop, 40px));
+          --hom-rail-left: var(--page-gutter-desktop);
+          --content-rail: calc(var(--hom-rail-left) + var(--hom-entity-padding-desktop, 40px));
         }
 
         @media (min-width: 769px) and (max-width: 1249px) {
           :root {
             --page-gutter: var(--page-gutter-tablet);
-            --homio-rail-left: var(--page-gutter-tablet);
-            --content-rail: calc(var(--homio-rail-left) + var(--homio-entity-padding-desktop, 40px));
+            --hom-rail-left: var(--page-gutter-tablet);
+            --content-rail: calc(var(--hom-rail-left) + var(--hom-entity-padding-desktop, 40px));
           }
         }
 
         @media (max-width: 768px), (max-height: 500px) {
           :root {
             --page-gutter: var(--page-gutter-mobile);
-            --homio-rail-left: var(--page-gutter-mobile);
-            --content-rail: calc(var(--homio-rail-left) + var(--homio-entity-padding-mobile, 20px));
+            --hom-rail-left: var(--page-gutter-mobile);
+            --content-rail: calc(var(--hom-rail-left) + var(--hom-entity-padding-mobile, 20px));
           }
         }
 
@@ -363,14 +363,14 @@ homio-next:
           }
         }
 
-        .homio-entities,
-        .homio-entities > div {
+        .hom-entities,
+        .hom-entities > div {
           scrollbar-width: none;
           -ms-overflow-style: none;
         }
 
-        .homio-entities::-webkit-scrollbar,
-        .homio-entities > div::-webkit-scrollbar {
+        .hom-entities::-webkit-scrollbar,
+        .hom-entities > div::-webkit-scrollbar {
           width: 0 !important;
           height: 0 !important;
           background: transparent !important;
@@ -422,7 +422,7 @@ homio-next:
             height: 170px;
             pointer-events: none;
             z-index: 2;
-            background: var(--homio-nav-fade, linear-gradient(
+            background: var(--hom-nav-fade, linear-gradient(
               to top,
               rgba(0,0,0,0.82) 0%,
               rgba(0,0,0,0.0) 65%
@@ -437,19 +437,19 @@ homio-next:
     }
 
     @media (hover:hover) {
-      :host(:not(.homio-hero)) ha-card:hover,
-      :host(:not(.homio-hero)) ha-card:focus-within {
-        filter: var(--homio-hover-filter, brightness(1.10)) !important;
+      :host(:not(.hom-hero)) ha-card:hover,
+      :host(:not(.hom-hero)) ha-card:focus-within {
+        filter: var(--hom-hover-filter, brightness(1.10)) !important;
       }
     }
 
     @media (hover:none) {
-      :host(:not(.homio-hero)) ha-card:active {
-        filter: var(--homio-hover-filter, brightness(1.12)) !important;
+      :host(:not(.hom-hero)) ha-card:active {
+        filter: var(--hom-hover-filter, brightness(1.12)) !important;
       }
     }
 
-    :host(.homio-entity) {
+    :host(.hom-entity) {
       position: relative !important;
       z-index: 0 !important;
       display: block !important;
@@ -459,7 +459,7 @@ homio-next:
       box-shadow: var(--button-card-box-shadow, var(--ha-card-box-shadow)) !important;
     }
 
-    :host(.homio-entity) ha-card {
+    :host(.hom-entity) ha-card {
       position: relative !important;
       z-index: 0 !important;
       border-radius: inherit !important;
@@ -468,7 +468,7 @@ homio-next:
       box-shadow: none !important;
     }
 
-    :host(.homio-entity) ha-card::before {
+    :host(.hom-entity) ha-card::before {
       content:"";
       position:absolute;
       inset:0;
@@ -494,7 +494,7 @@ homio-next:
       mix-blend-mode: multiply;
     }
 
-    :host(.homio-entity) ha-card:active {
+    :host(.hom-entity) ha-card:active {
       transform: translateY(.5px);
       backface-visibility: hidden;
       will-change: transform;

@@ -1,14 +1,14 @@
-homio_entity:
+hom_entity:
   template:
-    - homio_default
-  class: homio-entity
+    - hom_default
+  class: hom-entity
   show_state: true
   show_entity_picture: true
 
   entity_picture: |
     [[[
       const icon = variables.icon || "default";
-      return `/local/homio/icons/${icon}.svg`;
+      return `/local/hom/icons/${icon}.svg`;
     ]]]
 
   state_display: |
@@ -30,17 +30,17 @@ homio_entity:
           - background: var(--ha-card-background-active)
           - box-shadow: var(--button-card-box-shadow-active, var(--button-card-box-shadow)) !important
         name:
-          - color: var(--homio-entity-active, var(--primary-text-color))
+          - color: var(--hom-entity-active, var(--primary-text-color))
         state:
           - color: var(--secondary-text-color)
         icon:
-          - color: var(--homio-entity-active, var(--primary-text-color))
+          - color: var(--hom-entity-active, var(--primary-text-color))
         img_cell:
-          - opacity: var(--homio-entity-picture-active-opacity, 1) !important
-          - filter: var(--homio-entity-picture-active-filter, none) !important
+          - opacity: var(--hom-entity-picture-active-opacity, 1) !important
+          - filter: var(--hom-entity-picture-active-filter, none) !important
         entity_picture:
-          - opacity: var(--homio-entity-picture-active-opacity, 1) !important
-          - filter: var(--homio-entity-picture-active-filter, none) !important
+          - opacity: var(--hom-entity-picture-active-opacity, 1) !important
+          - filter: var(--hom-entity-picture-active-filter, none) !important
 
   styles:
     card:
@@ -52,29 +52,29 @@ homio_entity:
           [[[
             const isMobile = window.innerWidth <= 768;
             return isMobile
-              ? 'var(--homio-entity-height-mobile, 120px)'
-              : 'var(--homio-entity-height-desktop, 180px)';
+              ? 'var(--hom-entity-height-mobile, 120px)'
+              : 'var(--hom-entity-height-desktop, 180px)';
           ]]]
       - padding-left: |
           [[[
             const isMobile = window.innerWidth <= 768;
             return isMobile
-              ? 'var(--homio-entity-padding-mobile, 20px)'
-              : 'var(--homio-entity-padding-desktop, 32px)';
+              ? 'var(--hom-entity-padding-mobile, 20px)'
+              : 'var(--hom-entity-padding-desktop, 32px)';
           ]]]
       - padding-right: |
           [[[
             const isMobile = window.innerWidth <= 768;
             return isMobile
-              ? 'var(--homio-entity-padding-mobile, 20px)'
-              : 'var(--homio-entity-padding-desktop, 32px)';
+              ? 'var(--hom-entity-padding-mobile, 20px)'
+              : 'var(--hom-entity-padding-desktop, 32px)';
           ]]]
       - padding-top: 8px
       - padding-bottom: 8px
       - scroll-snap-align: start
       - display: |
           [[[
-            return (states['input_boolean.homio_mobile_navigation'].state === 'on') ? 'none' : 'block';
+            return (states['input_boolean.hom_mobile_navigation'].state === 'on') ? 'none' : 'block';
           ]]]
       - --ha-card-border-width: 0
       - transition: background-color .22s ease,
@@ -83,17 +83,17 @@ homio_entity:
                     filter .18s ease
 
     name:
-      - color: var(--homio-entity-inactive, var(--secondary-text-color)) !important
+      - color: var(--hom-entity-inactive, var(--secondary-text-color)) !important
       - font-weight: 600
-      - text-shadow: var(--homio-entity-text-shadow, 0 0 3px rgba(0, 0, 0, 0.3))
+      - text-shadow: var(--hom-entity-text-shadow, 0 0 3px rgba(0, 0, 0, 0.3))
       - justify-self: start
       - margin-bottom: 5px
       - font-size: |
           [[[
             const isMobile = window.innerWidth <= 768;
             return isMobile
-              ? 'var(--homio-entity-name-font-mobile, 15px)'
-              : 'var(--homio-entity-name-font-desktop, 16px)';
+              ? 'var(--hom-entity-name-font-mobile, 15px)'
+              : 'var(--hom-entity-name-font-desktop, 16px)';
           ]]]
       - line-height: 1.2
       - white-space: nowrap
@@ -103,15 +103,15 @@ homio_entity:
 
     state:
       - text-transform: capitalize
-      - color: var(--homio-entity-inactive, var(--secondary-text-color)) !important
+      - color: var(--hom-entity-inactive, var(--secondary-text-color)) !important
       - font-size: |
           [[[
             const isMobile = window.innerWidth <= 768;
             return isMobile
-              ? 'var(--homio-entity-state-font-mobile, 13px)'
-              : 'var(--homio-entity-state-font-desktop, 14px)';
+              ? 'var(--hom-entity-state-font-mobile, 13px)'
+              : 'var(--hom-entity-state-font-desktop, 14px)';
           ]]]
-      - text-shadow: var(--homio-entity-text-shadow, 0 0 3px rgba(0, 0, 0, 0.3))
+      - text-shadow: var(--hom-entity-text-shadow, 0 0 3px rgba(0, 0, 0, 0.3))
       - justify-self: start
       - font-weight: 700
       - opacity: 0.85
@@ -129,7 +129,7 @@ homio_entity:
       - place-content: center
 
     img_cell:
-      - color: var(--homio-entity-inactive, var(--secondary-text-color)) !important
+      - color: var(--hom-entity-inactive, var(--secondary-text-color)) !important
       - width: |
           [[[
             return (window.innerWidth <= 768) ? '28px' : '30px';
@@ -142,11 +142,11 @@ homio_entity:
       - transition: opacity .18s ease, filter .18s ease
 
     entity_picture:
-      - opacity: var(--homio-entity-picture-inactive-opacity, .9)
-      - filter: var(--homio-entity-picture-inactive-filter, brightness(.9))
+      - opacity: var(--hom-entity-picture-inactive-opacity, .9)
+      - filter: var(--hom-entity-picture-inactive-filter, brightness(.9))
       - transition: opacity .18s ease, filter .18s ease
 
     icon:
-      - color: var(--homio-entity-inactive, var(--secondary-text-color)) !important
+      - color: var(--hom-entity-inactive, var(--secondary-text-color)) !important
       - width: 100%
       - height: 100%

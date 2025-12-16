@@ -1,11 +1,11 @@
-homio_occupancy:
+hom_curtain:
   template:
-    - homio_entity
-  variables:
-    icon: occupancy
+    - hom_entity
   show_entity_picture: true
   show_name: true
   show_state: true
-  name: Occupancy
+  name: Curtain
   tap_action:
     action: more-info
+  hold_action:
+    action: toggle

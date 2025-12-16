@@ -1,4 +1,4 @@
-homio_default:
+hom_default:
   styles:
     card:
       - "--button-card-ripple-color": transparent

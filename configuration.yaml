@@ -26,9 +26,9 @@ lovelace:
     - type: "css"
       url: "https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100..900&display=swap"
   dashboards:
-    dashboard-homio-next:
+    dashboard-hom-next:
       mode: yaml
-      title: "Homio"
+      title: "Hōm"
       icon: mdi:home
       show_in_sidebar: true
-      filename: dashboards/homio/homio.yaml
+      filename: dashboards/hom/hom.yaml

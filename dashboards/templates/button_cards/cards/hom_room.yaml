@@ -1,9 +1,9 @@
 # Room
-homio_room:
-  class: "homio-hero"
+hom_room:
+  class: "hom-hero"
   template:
-    - homio_default
-    - homio_shared
+    - hom_default
+    - hom_shared
 
   triggers_update:
     - '[[[ return variables.motion_sensor ]]]'
@@ -12,7 +12,7 @@ homio_room:
     - '[[[ return variables.humid_sensor ]]]'
     - '[[[ return variables.presence_entity_1 ]]]'
     - '[[[ return variables.presence_entity_2 ]]]'
-    - input_boolean.homio_mobile_navigation
+    - input_boolean.hom_mobile_navigation
 
   variables:
     image: home
@@ -44,7 +44,7 @@ homio_room:
       - --hero-img: >
           [[[
             const img = variables.image || 'default';
-            const url = `/local/homio/rooms/${img}.jpg`;
+            const url = `/local/hom/rooms/${img}.jpg`;
             return `url("${url}")`;
           ]]]
       - --hero-img-pos: >
@@ -116,7 +116,7 @@ homio_room:
       temperature:
         - display: >
             [[[
-              const navOpen = states['input_boolean.homio_mobile_navigation']?.state === 'on';
+              const navOpen = states['input_boolean.hom_mobile_navigation']?.state === 'on';
               const has = variables.show_temp && variables.temp_sensor && states[variables.temp_sensor];
               return (!navOpen && has) ? 'block' : 'none';
             ]]]
@@ -144,7 +144,7 @@ homio_room:
         - pointer-events: auto
         - display: >
             [[[
-              return (states['input_boolean.homio_mobile_navigation']?.state === 'on')
+              return (states['input_boolean.hom_mobile_navigation']?.state === 'on')
                 ? 'none'
                 : 'block';
             ]]]
@@ -156,7 +156,7 @@ homio_room:
         - pointer-events: auto
         - display: >
             [[[
-              const navOpen = states['input_boolean.homio_mobile_navigation']?.state === 'on';
+              const navOpen = states['input_boolean.hom_mobile_navigation']?.state === 'on';
               return (!navOpen && variables.show_media_badge) ? 'block' : 'none';
             ]]]
 
@@ -192,10 +192,10 @@ homio_room:
     menu:
       card:
         type: custom:button-card
-        template: homio_menu_icon
+        template: hom_menu_icon
 
     navigation:
-      card: !include /config/dashboards/templates/includes/homio_navigation.yaml
+      card: !include /config/dashboards/templates/includes/hom_navigation.yaml
 
     temperature: |
       [[[
@@ -231,7 +231,7 @@ homio_room:
           margin: 0
         cards:
           - type: custom:button-card
-            template: homio_badge_presence
+            template: hom_badge_presence
             entity: '[[[ return variables.presence_entity_1 ]]]'
             styles:
               card:
@@ -246,7 +246,7 @@ homio_room:
                     ]]]
 
           - type: custom:button-card
-            template: homio_badge_presence
+            template: hom_badge_presence
             entity: '[[[ return variables.presence_entity_2 ]]]'
             styles:
               card:
@@ -261,7 +261,7 @@ homio_room:
                     ]]]
 
           - type: custom:button-card
-            template: homio_badge_air_quality
+            template: hom_badge_air_quality
             entity: '[[[ return variables.quality_sensor ]]]'
             styles:
               card:
@@ -277,7 +277,7 @@ homio_room:
                     ]]]
 
           - type: custom:button-card
-            template: homio_badge_humidity
+            template: hom_badge_humidity
             entity: '[[[ return variables.humid_sensor ]]]'
             styles:
               card:
@@ -302,18 +302,18 @@ homio_room:
           column-gap: 12px
         cards:
           - type: custom:button-card
-            template: homio_badge_media
+            template: hom_badge_media
             entity: media_player.spotify
 
           - type: custom:button-card
-            template: homio_badge_plex
+            template: hom_badge_plex
             entity: binary_sensor.plex_active_stream
             variables: { session_entity: sensor.plex_active_stream_all }
 
           - type: custom:button-card
-            template: homio_badge_media
+            template: hom_badge_media
             entity: media_player.living_room_apple_tv
 
           - type: custom:button-card
-            template: homio_badge_media
+            template: hom_badge_media
             entity: media_player.bedroom_apple_tv

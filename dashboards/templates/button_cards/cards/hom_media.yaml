@@ -1,8 +1,8 @@
 # Media Card
-homio_media:
+hom_media:
   show_empty: false
   template:
-    - homio_entity
+    - hom_entity
 
   variables:
     icon: |
@@ -133,7 +133,7 @@ homio_media:
           [[[
             const s = String(entity?.state || "").toLowerCase();
             if (s === "playing") return null;
-            return `/local/images/Homio/icons/${variables.icon}.svg`;
+            return `/local/hom/icons/${variables.icon}.svg`;
           ]]]
         styles:
           card:
@@ -147,15 +147,15 @@ homio_media:
                 [[[
                   const s = String(entity?.state || "").toLowerCase();
                   return (s === "playing")
-                    ? 'var(--homio-entity-picture-active-opacity,1)'
-                    : 'var(--homio-entity-picture-inactive-opacity,.82)';
+                    ? 'var(--hom-entity-picture-active-opacity,1)'
+                    : 'var(--hom-entity-picture-inactive-opacity,.82)';
                 ]]]
             - filter: |
                 [[[
                   const s = String(entity?.state || "").toLowerCase();
                   return (s === "playing")
-                    ? 'var(--homio-entity-picture-active-filter,none)'
-                    : 'var(--homio-entity-picture-inactive-filter,brightness(.8))';
+                    ? 'var(--hom-entity-picture-active-filter,none)'
+                    : 'var(--hom-entity-picture-inactive-filter,brightness(.8))';
                 ]]]
             - width: 60%
             - height: 60%

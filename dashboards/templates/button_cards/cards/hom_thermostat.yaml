@@ -1,12 +1,12 @@
-homio_thermostat:
-  template: [homio_entity]
+hom_thermostat:
+  template: [hom_entity]
   show_entity_picture: false
   show_icon: false
   show_label: false
   name: Thermostat
 
   variables:
-    thermostat_toggle_helper: input_boolean.homio_cooling_control
+    thermostat_toggle_helper: input_boolean.hom_cooling_control
 
   state_display: |
     [[[
@@ -99,9 +99,9 @@ homio_thermostat:
         cards:
 
           - type: custom:button-card
-            template: [homio_default]
+            template: [hom_default]
             show_entity_picture: true
-            entity_picture: /local/images/Homio/icons/power_off.svg
+            entity_picture: /local/hom/icons/power_off.svg
             tap_action:
               action: call-service
               service: climate.set_hvac_mode
@@ -124,14 +124,14 @@ homio_thermostat:
               icon: [ { width: '100%' }, { height: '100%' } ]
 
           - type: custom:button-card
-            template: [homio_default]
+            template: [hom_default]
             show_entity_picture: true
             entity_picture: |
               [[[
-                const sel = states['input_select.homio_thermostat_mode']?.state || 'cool';
+                const sel = states['input_select.hom_thermostat_mode']?.state || 'cool';
                 return sel === 'heat'
-                  ? '/local/images/Homio/icons/heating.svg'
-                  : '/local/images/Homio/icons/cooling.svg';
+                  ? '/local/hom/icons/heating.svg'
+                  : '/local/hom/icons/cooling.svg';
               ]]]
 
             tap_action:
@@ -141,17 +141,17 @@ homio_thermostat:
                 entity_id: '[[[ return entity.entity_id ]]]'
                 hvac_mode: |
                   [[[
-                    return states['input_select.homio_thermostat_mode']?.state || 'cool';
+                    return states['input_select.hom_thermostat_mode']?.state || 'cool';
                   ]]]
 
             hold_action:
               action: call-service
               service: input_select.select_option
               data:
-                entity_id: input_select.homio_thermostat_mode
+                entity_id: input_select.hom_thermostat_mode
                 option: |
                   [[[
-                    const sel = states['input_select.homio_thermostat_mode']?.state || 'cool';
+                    const sel = states['input_select.hom_thermostat_mode']?.state || 'cool';
                     return sel === 'heat' ? 'cool' : 'heat';
                   ]]]
 
@@ -174,13 +174,13 @@ homio_thermostat:
     target_temperature:
       card:
         type: custom:button-card
-        template: [homio_entity]
+        template: [hom_entity]
         show_entity_picture: false
         show_icon: false
         name: Target Temp
         state_display: |
           [[[
-            return states['input_number.homio_thermostat_target_temperature'].state + "°"
+            return states['input_number.hom_thermostat_target_temperature'].state + "°"
           ]]]
         tap_action:
           action: call-service
@@ -225,14 +225,14 @@ homio_thermostat:
               cards:
                 # UP
                 - type: custom:button-card
-                  template: [homio_default]
+                  template: [hom_default]
                   show_entity_picture: true
-                  entity_picture: /local/images/Homio/icons/increase.svg
+                  entity_picture: /local/hom/icons/increase.svg
                   tap_action:
                     action: call-service
                     service: input_number.increment
                     service_data:
-                      entity_id: input_number.homio_thermostat_target_temperature
+                      entity_id: input_number.hom_thermostat_target_temperature
                   styles:
                     card:
                       - height: 100%
@@ -246,7 +246,7 @@ homio_thermostat:
 
                 # SET
                 - type: custom:button-card
-                  template: [homio_default]
+                  template: [hom_default]
                   name: SET
                   tap_action:
                     action: call-service
@@ -255,7 +255,7 @@ homio_thermostat:
                       entity_id: '[[[ return entity.entity_id ]]]'
                       temperature: |
                         [[[
-                          return parseFloat(states['input_number.homio_thermostat_target_temperature'].state);
+                          return parseFloat(states['input_number.hom_thermostat_target_temperature'].state);
                         ]]]
                   styles:
                     card:
@@ -273,14 +273,14 @@ homio_thermostat:
 
                 # DOWN
                 - type: custom:button-card
-                  template: [homio_default]
+                  template: [hom_default]
                   show_entity_picture: true
-                  entity_picture: /local/images/Homio/icons/decrease.svg
+                  entity_picture: /local/hom/icons/decrease.svg
                   tap_action:
                     action: call-service
                     service: input_number.decrement
                     service_data:
-                      entity_id: input_number.homio_thermostat_target_temperature
+                      entity_id: input_number.hom_thermostat_target_temperature
                   styles:
                     card:
                       - height: 100%

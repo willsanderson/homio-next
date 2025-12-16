@@ -3,26 +3,26 @@ position: absolute
 z-index: 3
 display: grid
 grid-auto-flow: column
-grid-auto-columns: var(--homio-entity-col-width-desktop, 300px)
+grid-auto-columns: var(--hom-entity-col-width-desktop, 300px)
 grid-column-gap: 8px
 grid-row-gap: 8px
 margin: 0
 inset: >
-  auto var(--homio-entity-right-inset-desktop,
-           var(--homio-rail-left, var(--page-gutter, 8vw)))
-       var(--homio-entity-bottom-desktop, 60px)
-       var(--homio-rail-left, var(--page-gutter, 8vw))
-padding: 20px var(--homio-entity-shadow-pad-right-desktop, 0px) 40px 0
+  auto var(--hom-entity-right-inset-desktop,
+           var(--hom-rail-left, var(--page-gutter, 8vw)))
+       var(--hom-entity-bottom-desktop, 60px)
+       var(--hom-rail-left, var(--page-gutter, 8vw))
+padding: 20px var(--hom-entity-shadow-pad-right-desktop, 0px) 40px 0
 box-sizing: border-box
 scroll-snap-type: x mandatory
-scroll-padding-inline: var(--homio-entity-shadow-pad-right-desktop, 0px)
+scroll-padding-inline: var(--hom-entity-shadow-pad-right-desktop, 0px)
 overflow-x: auto
-overflow-y: var(--homio-entity-overflow-y-desktop, hidden)
+overflow-y: var(--hom-entity-overflow-y-desktop, hidden)
 -webkit-overflow-scrolling: touch
-grid-template-rows: var(--homio-entity-rows-desktop, repeat(1, auto))
-min-height: var(--homio-entity-height-desktop, 180px)
+grid-template-rows: var(--hom-entity-rows-desktop, repeat(1, auto))
+min-height: var(--hom-entity-height-desktop, 180px)
 align-content: end
-justify-content: var(--homio-entity-justify-desktop, flex-start)
+justify-content: var(--hom-entity-justify-desktop, flex-start)
 scrollbar-width: none
 -ms-overflow-style: none
 
@@ -33,9 +33,9 @@ mediaquery:
     z-index: 4
     inset: >
       calc(var(--entity-top-mobile, 260px) + 180px)
-      var(--homio-rail-left, var(--page-gutter-mobile, 14px))
+      var(--hom-rail-left, var(--page-gutter-mobile, 14px))
       auto
-      var(--homio-rail-left, var(--page-gutter-mobile, 14px))
+      var(--hom-rail-left, var(--page-gutter-mobile, 14px))
     margin: 0
     padding: "0 0 calc(64px + env(safe-area-inset-bottom)) 0"
     width: auto

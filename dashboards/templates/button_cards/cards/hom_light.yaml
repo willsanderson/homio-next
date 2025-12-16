@@ -1,6 +1,6 @@
-homio_light:
+hom_light:
   template:
-    - homio_entity
+    - hom_entity
   show_last_changed: false
   state_display: >
     [[[
@@ -9,11 +9,6 @@ homio_light:
       if (count === 1) return "1 on";
       return `${count} on`;
     ]]]
-  # state_display: |
-  #   [[[ if (entity.state === "on" && entity.attributes.brightness) 
-  #     {return Math.round((entity.attributes.brightness / 255) * 100) +
-  #     "%"} else return "Off"
-  #   ]]]
   tap_action:
     action: more-info
   hold_action:
@@ -79,12 +74,12 @@ homio_light:
             - overflow: visible
           track:
             - height: 8px
-            - background: var(--homio-slider-track)
+            - background: var(--hom-slider-track)
             - border-radius: 20px
             - transition: background .2s ease
           progress:
             - height: 8px
-            - background: var(--homio-slider-progress)
+            - background: var(--hom-slider-progress)
             - border-radius: 20px
             - transition: background .2s ease
           thumb:
@@ -97,8 +92,8 @@ homio_light:
                   return (window.innerWidth <= 768) ? '14px' : '16px';
                 ]]]
             - border-radius: 9999px
-            - background: var(--homio-slider-thumb)
+            - background: var(--hom-slider-thumb)
             - transform: translateY(-3px)
-            - box-shadow: var(--homio-slider-shadow)
+            - box-shadow: var(--hom-slider-shadow)
             - transition: box-shadow .15s ease, transform .15s ease
 

@@ -1,6 +1,6 @@
-homio_time:
+hom_time:
   template:
-    - homio_default
+    - hom_default
   name: |
     [[[ 
         return states["sensor.current_time_us"].state

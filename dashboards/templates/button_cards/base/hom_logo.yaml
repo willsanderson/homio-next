@@ -1,18 +1,19 @@
-homio_nav_button:
+hom_logo:
   template:
-    - homio_default
+    - hom_default
   tap_action:
     action: navigate
-    navigation_path: "[[[ return variables.path ]]]"
+    navigation_path: /dashboard-hom/hom
+  name: Hōm
   styles:
     name:
       - color: var(--primary-text-color)
+      - letter-spacing: 2px
       - font-size: 18px
       - font-weight: 700
-      - border-bottom: >
-          [[[ if(variables.path === window.location.pathname) {return "2px solid
-          white"} else {return "none"} ]]]
+      - text-transform: uppercase
       - justify-self: start
     card:
       - background: transparent
       - pointer-events: all
+      - box-shadow: none

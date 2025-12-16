@@ -1,5 +1,5 @@
 # Badges
-homio_badge_base:
+hom_badge_base:
   styles:
     card:
       - background: var(--badge-background)
@@ -89,8 +89,8 @@ homio_badge_base:
     ha-card::after{  z-index: 2 !important; }
 
 # Air Quality
-homio_badge_air_quality:
-  template: [homio_badge_base]
+hom_badge_air_quality:
+  template: [hom_badge_base]
   tap_action: { action: more-info }
   styles:
     icon:
@@ -145,8 +145,8 @@ homio_badge_air_quality:
     ]]]
 
 # Humidity
-homio_badge_humidity:
-  template: [homio_badge_base]
+hom_badge_humidity:
+  template: [hom_badge_base]
   tap_action: { action: more-info }
   icon: mdi:water-percent
   styles:
@@ -199,8 +199,8 @@ homio_badge_humidity:
     ]]]
 
 # Presence
-homio_badge_presence:
-  template: [homio_badge_base]
+hom_badge_presence:
+  template: [hom_badge_base]
   show_state: false
   show_label: false
   show_entity_picture: >
@@ -292,8 +292,8 @@ homio_badge_presence:
     ]]]
 
 # Plex
-homio_badge_plex:
-  template: [homio_badge_media]
+hom_badge_plex:
+  template: [hom_badge_media]
   variables:
     session_entity: sensor.plex_active_stream_all
 
@@ -352,7 +352,7 @@ homio_badge_plex:
           ]]]
       - --bg-url: >
           [[[
-            const cacheKey = '_homioPlexBgUrl';
+            const cacheKey = '_homPlexBgUrl';
             const id = variables?.session_entity;
             const s  = id && hass.states[id];
             const a  = s?.attributes || {};
@@ -427,8 +427,8 @@ homio_badge_plex:
     ]]]
 
 # Media
-homio_badge_media:
-  template: [homio_badge_base]
+hom_badge_media:
+  template: [hom_badge_base]
   show_state: false
   show_label: false
   tap_action: { action: more-info }
@@ -451,7 +451,7 @@ homio_badge_media:
           ]]]
       - --bg-url: >
           [[[
-            const cacheKey = '_homioBgUrl';
+            const cacheKey = '_homBgUrl';
             const a = entity?.attributes || {};
             const v = variables || {};
             const pref =
