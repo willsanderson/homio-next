@@ -1,4 +1,4 @@
-# :house: Homio Next
+# :house: Hōm
 
 A modern mobile-friendly fork of the original [Homio](https://github.com/iamtherufus/Homio) dashboard by iamtherufus for Home Assistant, featuring light and dark mode, redesigned cards, new custom badges, and media integration.
 
@@ -19,26 +19,26 @@ If you’re new to Homio in general, you should absolutely read their README fir
 
 > 👉 Original project & docs: https://github.com/iamtherufus/Homio
 
-Homio-Next keeps the same basic structure (YAML dashboard, helpers, theme), but changes the look, layout, and many of the UI details.
+Hōm keeps the same basic structure (YAML dashboard, helpers, theme), but changes the look, layout, and many of the UI details.
 
 ---
 
-## :question: What’s different in Homio-Next
+## :question: What’s different in Hōm
 
-Homio-Next adds new features and changes including:
+Hōm adds new features and changes including:
 
 - **New light/dark tuning**  
   - Refined card backgrounds, shadows, and typography  
   - Dark mode adjusted for better contrast and “liquid glass” style cards
 
 - **Updated layouts and cards**  
-  - Refined screen layout includes (`homio_screen_layout.yaml`, `homio_entity_layout.yaml`)  
+  - Refined screen layout includes (`hom_screen_layout.yaml`, `hom_entity_layout.yaml`)  
   - Adjusted spacing, grid behavior, and row heights for desktop/tablet/mobile
   - New button cards including unified thermostat card for heating/cooling, curtain card, fan card, media card
 
 - **Navigation & mobile behavior**  
-  - Custom mobile navbar (`homio_navbar_mobile.yaml`) tuned for smaller screens  
-  - Improved navigation templates (`homio_navigation.yaml`, `homio_navigation_list.yaml`)
+  - Custom mobile navbar (`hom_navbar_mobile.yaml`) tuned for smaller screens  
+  - Improved navigation templates (`hom_navigation.yaml`, `hom_navigation_list.yaml`)
 
 - **Badges**  
   - New custom badges for room sensors and presence status  
@@ -85,21 +85,21 @@ Example layout:
 ```text
 /config
 └── dashboards/
-    └── homio/
-        └── homio.yaml            # Main Homio-Next dashboard
+    └── hom/
+        └── hom.yaml            # Main Hōm dashboard
 └── dashboards/templates/includes/
-    ├── homio_screen_layout.yaml
-    ├── homio_entity_layout.yaml
-    ├── homio_navbar_mobile.yaml
-    ├── homio_navigation.yaml
-    └── homio_navigation_list.yaml
+    ├── hom_screen_layout.yaml
+    ├── hom_entity_layout.yaml
+    ├── hom_navbar_mobile.yaml
+    ├── hom_navigation.yaml
+    └── hom_navigation_list.yaml
 └── themes/
-    └── homio-next/
-        └── homio-next.yaml       # Homio-Next theme
+    └── hom-next/
+        └── hom-next.yaml       # Hōm theme
 └── packages/
-    └── homio_helpers.yaml        # Helpers required by the dashboard
+    └── hom_helpers.yaml        # Helpers required by the dashboard
 └── www/
-    └── homio/
+    └── hom/
         ├── icons/                # UI icons
         └── images/               # Room/Background images
 
@@ -123,16 +123,16 @@ You don’t have to install the original Homio dashboard itself, but the environ
 
 ---
 
-### 2. Copy Homio-Next files into your config
+### 2. Copy Hōm files into your config
 
 From this repo, copy the following into your Home Assistant `/config` directory:
 
-- `dashboards/homio/` → `/config/dashboards/homio/`
+- `dashboards/hom/` → `/config/dashboards/hom/`
 - `dashboards/templates/includes/` → `/config/dashboards/templates/includes/`  
   (merge with your existing templates folder if you already have one)
-- `themes/homio-next/` → `/config/themes/homio-next/`
-- `packages/homio_helpers.yaml` → `/config/packages/`
-- `www/homio/` → `/config/www/homio/`  
+- `themes/hom/` → `/config/themes/hom/`
+- `packages/hom_helpers.yaml` → `/config/packages/`
+- `www/hom/` → `/config/www/hom/`  
 
 Restart Home Assistant or reload themes/resources as needed.
 
@@ -146,22 +146,22 @@ In `configuration.yaml` add the following:
 lovelace:
   mode: storage
   dashboards:
-    dashboard-homio:
+    dashboard-hom:
       mode: yaml
-      title: "Homio"
+      title: "Hōm"
       icon: mdi:home
       show_in_sidebar: true
-      filename: dashboards/homio/homio.yaml
+      filename: dashboards/hom/hom.yaml
 ```
 
-Restart Home Assistant, then refresh your browser and open **Homio** from the sidebar.
+Restart Home Assistant, then refresh your browser and open **Hōm** from the sidebar.
 
 ---
 
 ### 4. Configure entities & helpers
 
 - Update entity IDs in the YAML files to match your own setup (lights, media players, sensors, etc.).
-- Make sure everything defined in `packages/homio_helpers.yaml` exists in your config and uses the correct entity IDs.
+- Make sure everything defined in `packages/hom_helpers.yaml` exists in your config and uses the correct entity IDs.
 
 ---
 
@@ -169,9 +169,9 @@ Restart Home Assistant, then refresh your browser and open **Homio** from the si
 
 This repo is intended as a starting point:
 
-- Swap out room/background images in `www/homio-next/images/`.
-- Tweak theme colors, shadows, and typography in `themes/homio-next/homio-next.yaml`.
-- Adjust layouts (`homio_entity_layout.yaml`, etc.) to match your devices and preferences.
+- Swap out room/background images in `www/hom/images/`.
+- Tweak theme colors, shadows, and typography in `themes/hom/hom.yaml`.
+- Adjust layouts (`hom_entity_layout.yaml`, etc.) to match your devices and preferences.
 
 Because it’s all YAML, you can copy/paste specific cards or layouts into your own dashboards if you don’t want the full setup.
 
@@ -180,7 +180,7 @@ Because it’s all YAML, you can copy/paste specific cards or layouts into your 
 ## :trophy: Credits
 
 - Original Homio concept and base implementation: [iamtherufus/Homio](https://github.com/iamtherufus/Homio)
-- Homio-Next customization and ongoing tweaks: [@willsanderson](https://github.com/willsanderson)
+- Hōm customization and ongoing tweaks: [@willsanderson](https://github.com/willsanderson)
 
 **License:** MIT (same as the original Homio project).
 
