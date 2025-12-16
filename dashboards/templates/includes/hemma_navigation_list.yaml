@@ -1,30 +1,30 @@
 # Navigation List
 - type: custom:button-card
   template:
-    - hom_nav_button
+    - hemma_nav_button
   name: Living Room
   variables:
-    path: /dashboard-hom/living-room
+    path: /dashboard-hemma/living-room
   styles:
     card:
       - box-shadow: none
 
 - type: custom:button-card
   template:
-    - hom_nav_button
+    - hemma_nav_button
   name: Kitchen
   variables:
-    path: /dashboard-hom/kitchen
+    path: /dashboard-hemma/kitchen
   styles:
     card:
       - box-shadow: none
 
 - type: custom:button-card
   template:
-    - hom_nav_button
+    - hemma_nav_button
   name: Bedroom
   variables:
-    path: /dashboard-hom/bedroom
+    path: /dashboard-hemma/bedroom
   styles:
     card:
       - box-shadow: none

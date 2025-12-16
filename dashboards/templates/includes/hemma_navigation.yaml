@@ -31,7 +31,7 @@ card:
 
   cards:
     - type: custom:button-card
-      template: hom_logo
+      template: hemma_logo
       styles:
         card:
           - margin-left: 2px
@@ -59,7 +59,7 @@ card:
             align-items: center !important;
           }
 
-      cards: !include /config/dashboards/templates/includes/hom_navigation_list.yaml
+      cards: !include /config/dashboards/templates/includes/hemma_navigation_list.yaml
 
     - type: custom:button-card
-      template: hom_time
+      template: hemma_time

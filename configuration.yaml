@@ -28,7 +28,7 @@ lovelace:
   dashboards:
     dashboard-hom-next:
       mode: yaml
-      title: "Hōm"
+      title: "Hemma"
       icon: mdi:home
       show_in_sidebar: true
-      filename: dashboards/hom/hom.yaml
+      filename: dashboards/hemma/hemma.yaml

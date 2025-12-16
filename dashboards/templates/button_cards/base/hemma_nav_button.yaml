@@ -1,19 +1,18 @@
-hom_logo:
+hemma_nav_button:
   template:
-    - hom_default
+    - hemma_default
   tap_action:
     action: navigate
-    navigation_path: /dashboard-hom/hom
-  name: Hōm
+    navigation_path: "[[[ return variables.path ]]]"
   styles:
     name:
       - color: var(--primary-text-color)
-      - letter-spacing: 2px
       - font-size: 18px
       - font-weight: 700
-      - text-transform: uppercase
+      - border-bottom: >
+          [[[ if(variables.path === window.location.pathname) {return "2px solid
+          white"} else {return "none"} ]]]
       - justify-self: start
     card:
       - background: transparent
       - pointer-events: all
-      - box-shadow: none

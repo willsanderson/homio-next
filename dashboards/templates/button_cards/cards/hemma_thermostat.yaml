@@ -1,12 +1,12 @@
-hom_thermostat:
-  template: [hom_entity]
+hemma_thermostat:
+  template: [hemma_entity]
   show_entity_picture: false
   show_icon: false
   show_label: false
   name: Thermostat
 
   variables:
-    thermostat_toggle_helper: input_boolean.hom_cooling_control
+    thermostat_toggle_helper: input_boolean.hemma_cooling_control
 
   state_display: |
     [[[
@@ -99,9 +99,9 @@ hom_thermostat:
         cards:
 
           - type: custom:button-card
-            template: [hom_default]
+            template: [hemma_default]
             show_entity_picture: true
-            entity_picture: /local/hom/icons/power_off.svg
+            entity_picture: /local/hemma/icons/power_off.svg
             tap_action:
               action: call-service
               service: climate.set_hvac_mode
@@ -124,14 +124,14 @@ hom_thermostat:
               icon: [ { width: '100%' }, { height: '100%' } ]
 
           - type: custom:button-card
-            template: [hom_default]
+            template: [hemma_default]
             show_entity_picture: true
             entity_picture: |
               [[[
-                const sel = states['input_select.hom_thermostat_mode']?.state || 'cool';
+                const sel = states['input_select.hemma_thermostat_mode']?.state || 'cool';
                 return sel === 'heat'
-                  ? '/local/hom/icons/heating.svg'
-                  : '/local/hom/icons/cooling.svg';
+                  ? '/local/hemma/icons/heating.svg'
+                  : '/local/hemma/icons/cooling.svg';
               ]]]
 
             tap_action:
@@ -141,17 +141,17 @@ hom_thermostat:
                 entity_id: '[[[ return entity.entity_id ]]]'
                 hvac_mode: |
                   [[[
-                    return states['input_select.hom_thermostat_mode']?.state || 'cool';
+                    return states['input_select.hemma_thermostat_mode']?.state || 'cool';
                   ]]]
 
             hold_action:
               action: call-service
               service: input_select.select_option
               data:
-                entity_id: input_select.hom_thermostat_mode
+                entity_id: input_select.hemma_thermostat_mode
                 option: |
                   [[[
-                    const sel = states['input_select.hom_thermostat_mode']?.state || 'cool';
+                    const sel = states['input_select.hemma_thermostat_mode']?.state || 'cool';
                     return sel === 'heat' ? 'cool' : 'heat';
                   ]]]
 
@@ -174,13 +174,13 @@ hom_thermostat:
     target_temperature:
       card:
         type: custom:button-card
-        template: [hom_entity]
+        template: [hemma_entity]
         show_entity_picture: false
         show_icon: false
         name: Target Temp
         state_display: |
           [[[
-            return states['input_number.hom_thermostat_target_temperature'].state + "°"
+            return states['input_number.hemma_thermostat_target_temperature'].state + "°"
           ]]]
         tap_action:
           action: call-service
@@ -225,14 +225,14 @@ hom_thermostat:
               cards:
                 # UP
                 - type: custom:button-card
-                  template: [hom_default]
+                  template: [hemma_default]
                   show_entity_picture: true
-                  entity_picture: /local/hom/icons/increase.svg
+                  entity_picture: /local/hemma/icons/increase.svg
                   tap_action:
                     action: call-service
                     service: input_number.increment
                     service_data:
-                      entity_id: input_number.hom_thermostat_target_temperature
+                      entity_id: input_number.hemma_thermostat_target_temperature
                   styles:
                     card:
                       - height: 100%
@@ -246,7 +246,7 @@ hom_thermostat:
 
                 # SET
                 - type: custom:button-card
-                  template: [hom_default]
+                  template: [hemma_default]
                   name: SET
                   tap_action:
                     action: call-service
@@ -255,7 +255,7 @@ hom_thermostat:
                       entity_id: '[[[ return entity.entity_id ]]]'
                       temperature: |
                         [[[
-                          return parseFloat(states['input_number.hom_thermostat_target_temperature'].state);
+                          return parseFloat(states['input_number.hemma_thermostat_target_temperature'].state);
                         ]]]
                   styles:
                     card:
@@ -273,14 +273,14 @@ hom_thermostat:
 
                 # DOWN
                 - type: custom:button-card
-                  template: [hom_default]
+                  template: [hemma_default]
                   show_entity_picture: true
-                  entity_picture: /local/hom/icons/decrease.svg
+                  entity_picture: /local/hemma/icons/decrease.svg
                   tap_action:
                     action: call-service
                     service: input_number.decrement
                     service_data:
-                      entity_id: input_number.hom_thermostat_target_temperature
+                      entity_id: input_number.hemma_thermostat_target_temperature
                   styles:
                     card:
                       - height: 100%

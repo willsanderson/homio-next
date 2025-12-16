@@ -1,6 +1,6 @@
-hom_curtain:
+hemma_curtain:
   template:
-    - hom_entity
+    - hemma_entity
   show_entity_picture: true
   show_name: true
   show_state: true

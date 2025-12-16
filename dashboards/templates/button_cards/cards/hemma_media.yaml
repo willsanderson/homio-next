@@ -1,8 +1,8 @@
 # Media Card
-hom_media:
+hemma_media:
   show_empty: false
   template:
-    - hom_entity
+    - hemma_entity
 
   variables:
     icon: |
@@ -133,7 +133,7 @@ hom_media:
           [[[
             const s = String(entity?.state || "").toLowerCase();
             if (s === "playing") return null;
-            return `/local/hom/icons/${variables.icon}.svg`;
+            return `/local/hemma/icons/${variables.icon}.svg`;
           ]]]
         styles:
           card:
@@ -147,15 +147,15 @@ hom_media:
                 [[[
                   const s = String(entity?.state || "").toLowerCase();
                   return (s === "playing")
-                    ? 'var(--hom-entity-picture-active-opacity,1)'
-                    : 'var(--hom-entity-picture-inactive-opacity,.82)';
+                    ? 'var(--hemma-entity-picture-active-opacity,1)'
+                    : 'var(--hemma-entity-picture-inactive-opacity,.82)';
                 ]]]
             - filter: |
                 [[[
                   const s = String(entity?.state || "").toLowerCase();
                   return (s === "playing")
-                    ? 'var(--hom-entity-picture-active-filter,none)'
-                    : 'var(--hom-entity-picture-inactive-filter,brightness(.8))';
+                    ? 'var(--hemma-entity-picture-active-filter,none)'
+                    : 'var(--hemma-entity-picture-inactive-filter,brightness(.8))';
                 ]]]
             - width: 60%
             - height: 60%

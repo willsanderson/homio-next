@@ -12,10 +12,10 @@ views:
   - type: custom:grid-layout
     title: home
     path: home
-    layout: !include /config/dashboards/templates/includes/hom_screen_layout.yaml
+    layout: !include /config/dashboards/templates/includes/hemma_screen_layout.yaml
     cards:
       - type: custom:button-card
-        template: hom_room
+        template: hemma_room
         variables:
           image: home-demo
           image_position: center center
@@ -30,16 +30,16 @@ views:
           show_presence: true
           show_media_badge: true
         name: Home
-      - !include /config/dashboards/templates/includes/hom_navbar_mobile.yaml
+      - !include /config/dashboards/templates/includes/hemma_navbar_mobile.yaml
 
       - type: custom:layout-card
-        class: hom-entities  
+        class: hemma-entities  
         layout_type: custom:grid-layout
-        layout: !include /config/dashboards/templates/includes/hom_entity_layout.yaml
+        layout: !include /config/dashboards/templates/includes/hemma_entity_layout.yaml
         cards:
 
           - type: custom:button-card
-            template: hom_thermostat
+            template: hemma_thermostat
             entity: climate.home
             name: Thermostat
 
@@ -47,13 +47,13 @@ views:
             variables:
               icon: door
             template:
-              - hom_entity
+              - hemma_entity
             entity: lock.front_door
             name: Front Door
 
           - type: custom:button-card
             template:
-              - hom_entity
+              - hemma_light
             variables:
               icon: light
             tap_action:
@@ -66,14 +66,14 @@ views:
             variables:
               icon: doorbell
             template:
-              - hom_doorbell
+              - hemma_doorbell
             entity: camera.front_door_live_view
             name: Doorbell
 
   - type: custom:grid-layout
     title: living-room
     path: living-room
-    layout: !include /config/dashboards/templates/includes/hom_screen_layout.yaml
+    layout: !include /config/dashboards/templates/includes/hemma_screen_layout.yaml
     cards:
       - type: custom:button-card
         variables:
@@ -85,17 +85,17 @@ views:
           temp_sensor: sensor.living_room_temperature
           show_quality: true
           quality_sensor: sensor.air_quality_dyson_overall
-        template: hom_room
+        template: hemma_room
         name: Living Room
-      - !include /config/dashboards/templates/includes/hom_navbar_mobile.yaml
+      - !include /config/dashboards/templates/includes/hemma_navbar_mobile.yaml
 
       - type: custom:layout-card
-        class: hom-entities  
+        class: hemma-entities  
         layout_type: custom:grid-layout
-        layout: !include /config/dashboards/templates/includes/hom_entity_layout.yaml
+        layout: !include /config/dashboards/templates/includes/hemma_entity_layout.yaml
         cards:
           - type: custom:button-card
-            template: hom_thermostat
+            template: hemma_thermostat
             entity: climate.living_room
             name: Thermostat
 
@@ -103,7 +103,7 @@ views:
             variables:
               icon: apple
             template:
-              - hom_media
+              - hemma_media
             entity: media_player.living_room_apple_tv
             name: Apple TV
 
@@ -111,15 +111,15 @@ views:
             variables:
               icon: light
             template:
-              - hom_light
+              - hemma_light
             entity: light.living_room
-            name: Lights
+            name: Lightsf
 
           - type: custom:button-card
             variables:
               icon: tv
             template:
-              - hom_entity
+              - hemma_entity
             entity: media_player.living_room_tv
             name: TV
 
@@ -127,7 +127,7 @@ views:
             variables:
               icon: music
             template:
-              - hom_media
+              - hemma_media
             entity: media_player.living_room
             name: Sonos
 
@@ -135,13 +135,13 @@ views:
             variables:
               icon: purifier
             template:
-              - hom_fan
+              - hemma_fan
             entity: fan.dyson
             name: Purifier
 
           - type: custom:button-card
             template:
-              - hom_media
+              - hemma_media
             entity: media_player.playstation_5
             name: PS5
 
@@ -149,7 +149,7 @@ views:
             variables:
               icon: curtain
             template:
-              - hom_curtain
+              - hemma_curtain
             entity: cover.living_room_curtain
             name: Curtain
 
@@ -157,14 +157,14 @@ views:
             variables:
               icon: plant
             template:
-              - hom_entity
+              - hemma_entity
             entity: plant.rubber_tree
             name: Rubber Tree
 
   - type: custom:grid-layout
     title: kitchen
     path: kitchen
-    layout: !include /config/dashboards/templates/includes/hom_screen_layout.yaml
+    layout: !include /config/dashboards/templates/includes/hemma_screen_layout.yaml
     cards:
       - type: custom:button-card
         variables:
@@ -176,20 +176,20 @@ views:
           temp_sensor: sensor.hub_2_temperature
           show_quality: true
           quality_sensor: sensor.air_quality_dyson_overall
-        template: hom_room
+        template: hemma_room
         name: Kitchen
-      - !include /config/dashboards/templates/includes/hom_navbar_mobile.yaml
+      - !include /config/dashboards/templates/includes/hemma_navbar_mobile.yaml
 
       - type: custom:layout-card
-        class: hom-entities
+        class: hemma-entities
         layout_type: custom:grid-layout
-        layout: !include /config/dashboards/templates/includes/hom_entity_layout.yaml
+        layout: !include /config/dashboards/templates/includes/hemma_entity_layout.yaml
         cards:
           - type: custom:button-card
             variables:
               icon: light
             template:
-              - hom_light
+              - hemma_light
             entity: light.kitchen
             name: Lights
 
@@ -197,7 +197,7 @@ views:
             variables:
               icon: music
             template:
-              - hom_media
+              - hemma_media
             entity: media_player.kitchen
             name: Sonos
 
@@ -205,7 +205,7 @@ views:
             variables:
               icon: robot-vacuum
             template:
-              - hom_entity
+              - hemma_entity
             entity: vacuum.robot
             name: Clean Bot
 
@@ -213,14 +213,14 @@ views:
             variables:
               icon: apple
             template:
-              - hom_media
+              - hemma_media
             entity: media_player.kitchen_homepod
             name: HomePod
 
   - type: custom:grid-layout
     title: bedroom
     path: bedroom
-    layout: !include /config/dashboards/templates/includes/hom_screen_layout.yaml
+    layout: !include /config/dashboards/templates/includes/hemma_screen_layout.yaml
     cards:
       - type: custom:button-card
         variables:
@@ -234,17 +234,17 @@ views:
           temp_sensor: sensor.bedroom_temperature
           show_motion: true
           motion_sensor: binary_sensor.hue_motion_sensor_motion
-        template: hom_room
+        template: hemma_room
         name: Bedroom
-      - !include /config/dashboards/templates/includes/hom_navbar_mobile.yaml
+      - !include /config/dashboards/templates/includes/hemma_navbar_mobile.yaml
 
       - type: custom:layout-card
-        class: hom-entities
+        class: hemma-entities
         layout_type: custom:grid-layout
-        layout: !include /config/dashboards/templates/includes/hom_entity_layout.yaml
+        layout: !include /config/dashboards/templates/includes/hemma_entity_layout.yaml
         cards:
           - type: custom:button-card
-            template: hom_thermostat
+            template: hemma_thermostat
             entity: climate.bedroom
             name: Thermostat
 
@@ -252,7 +252,7 @@ views:
             variables:
               icon: apple
             template:
-              - hom_media
+              - hemma_media
             entity: media_player.bedroom_apple_tv
             name: Apple TV
 
@@ -260,7 +260,7 @@ views:
             variables:
               icon: light
             template:
-              - hom_light
+              - hemma_light
             entity: light.bedroom
             name: Lights
 
@@ -268,7 +268,7 @@ views:
             variables:
               icon: tv
             template:
-              - hom_entity
+              - hemma_entity
             entity: media_player.bedroom_tv
             name: TV
 
@@ -276,7 +276,7 @@ views:
             variables:
               icon: fan
             template:
-              - hom_fan
+              - hemma_fan
             entity: fan.bedroom
             name: Fan
 
@@ -284,7 +284,7 @@ views:
             variables:
               icon: music
             template:
-              - hom_media
+              - hemma_media
             entity: media_player.bedroom
             name: Sonos
             
@@ -292,7 +292,7 @@ views:
             variables:
               icon: humidifier
             template:
-              - hom_fan
+              - hemma_fan
             entity: humidifier.bedroom
             name: Humidifier
 
@@ -300,7 +300,7 @@ views:
             variables:
               icon: fan
             template:
-              - hom_fan
+              - hemma_fan
             entity: fan.snooz
             name: Snooz
 
@@ -308,7 +308,7 @@ views:
             variables:
               icon: purifier
             template:
-              - hom_fan
+              - hemma_fan
             entity: fan.air_purifier
             name: Purifier
 
@@ -316,7 +316,7 @@ views:
             variables:
               icon: curtain
             template:
-              - hom_curtain
+              - hemma_curtain
             entity: cover.bedroom_curtains
             name: Curtains
 
@@ -324,6 +324,6 @@ views:
             variables:
               icon: plant
             template:
-              - hom_entity
+              - hemma_entity
             entity: plant.monstera
             name: Monstera

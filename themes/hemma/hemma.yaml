@@ -1,4 +1,4 @@
-hom:
+Hemma:
   modes:
     light:
       primary-background-color: rgb(50, 50, 50)
@@ -11,30 +11,30 @@ hom:
       app-theme-color: rgb(0, 0, 0)
       ha-card-box-shadow: none
       button-card-box-shadow: var(--ha-shadow-light)
-      hom-nav-bg: rgba(255,255,255,0.11)
-      hom-nav-border: rgba(255,255,255,0.1)
-      hom-nav-shadow: >
+      hemma-nav-bg: rgba(255,255,255,0.11)
+      hemma-nav-border: rgba(255,255,255,0.1)
+      hemma-nav-shadow: >
         inset 3px 3px 5px -5px rgba(255,255,255,0.08),
         inset -3px -3px 5px -5px rgba(255,255,255,0.08),
         inset 0 0 3px -1px rgba(255,255,255,0.1),
         0 14px 22px rgba(0,0,0,0.08)
-      hom-nav-inactive-opacity: .7
-      hom-nav-icon: rgba(255,255,255,.7)
-      hom-nav-icon-active: rgba(255,255,255,1)
-      hom-nav-active-fill: rgba(255,255,255,0.2)
-      hom-nav-pill-shadow: inset 0 0 1px rgba(255,255,255,0.5)
-      hom-nav-blur: blur(10px)
-      hom-nav-fade: |
+      hemma-nav-inactive-opacity: .7
+      hemma-nav-icon: rgba(255,255,255,.7)
+      hemma-nav-icon-active: rgba(255,255,255,1)
+      hemma-nav-active-fill: rgba(255,255,255,0.2)
+      hemma-nav-pill-shadow: inset 0 0 1px rgba(255,255,255,0.5)
+      hemma-nav-blur: blur(10px)
+      hemma-nav-fade: |
         linear-gradient(
           to top,
           rgba(0,0,0,0.60) 0%,
           rgba(0,0,0,0.35) 30%,
           rgba(0,0,0,0.0) 65%
         )
-      hom-slider-track: rgba(255,255,255,0.22)
-      hom-slider-progress: rgba(255,255,255,0.95)
-      hom-slider-thumb: "#ffffff"
-      hom-slider-shadow: 0 2px 10px rgba(0,0,0,.18)
+      hemma-slider-track: rgba(255,255,255,0.22)
+      hemma-slider-progress: rgba(255,255,255,0.95)
+      hemma-slider-thumb: "#ffffff"
+      hemma-slider-shadow: 0 2px 10px rgba(0,0,0,.18)
       hero-img-filter: saturate(1.02) brightness(.985)
       hero-tint-top: rgba(56,56,56,0.65)
       hero-tint-mid: rgba(53,53,53,0.60)
@@ -59,28 +59,28 @@ hom:
       ha-card-box-shadow: none
       button-card-box-shadow: var(--ha-shadow-dark)
       button-card-box-shadow-active: var(--ha-shadow-dark-active)
-      hom-nav-bg: rgba(0,0,0,.3)
-      hom-nav-border: rgba(240,240,240,0.11)
-      hom-nav-inactive-opacity: .6
-      hom-nav-icon: rgba(240,240,240,.8)
-      hom-nav-icon-active: rgba(255,255,255,1)
-      hom-nav-shadow: >
+      hemma-nav-bg: rgba(0,0,0,.3)
+      hemma-nav-border: rgba(240,240,240,0.11)
+      hemma-nav-inactive-opacity: .6
+      hemma-nav-icon: rgba(240,240,240,.8)
+      hemma-nav-icon-active: rgba(255,255,255,1)
+      hemma-nav-shadow: >
         inset 0 10px 14px -14px rgba(0,0,0,0.08),
         inset 0 -10px 14px -14px rgba(0,0,0,0.08)
-      hom-nav-active-fill: rgba(255,255,255,0.2)
-      hom-nav-pill-shadow: inset 0 0 1px rgba(255,255,255,0.14)
-      hom-nav-blur: blur(12px)
-      hom-nav-fade: |
+      hemma-nav-active-fill: rgba(255,255,255,0.2)
+      hemma-nav-pill-shadow: inset 0 0 1px rgba(255,255,255,0.14)
+      hemma-nav-blur: blur(12px)
+      hemma-nav-fade: |
         linear-gradient(
           to top,
           rgba(0,0,0,0.60) 0%,
           rgba(0,0,0,0.35) 30%,
           rgba(0,0,0,0.0) 65%
         )
-      hom-slider-track: rgba(200,200,200,0.22)
-      hom-slider-progress: rgba(200,200,200,0.95)
-      hom-slider-thumb: "#ffffff"
-      hom-slider-shadow: 0 2px 12px rgba(0,0,0,.34)
+      hemma-slider-track: rgba(200,200,200,0.22)
+      hemma-slider-progress: rgba(200,200,200,0.95)
+      hemma-slider-thumb: "#ffffff"
+      hemma-slider-shadow: 0 2px 12px rgba(0,0,0,.34)
       hero-img-filter: saturate(1.02) brightness(0.98)
       hero-tint-top: rgba(50,50,50,0.65)
       hero-tint-mid: rgba(50,50,50,0.60)
@@ -162,43 +162,43 @@ hom:
   ha-color-on-primary-normal: var(--primary-color)
 
   # Entity Layout
-  hom-entity-height-desktop: 180px
-  hom-entity-height-mobile: 120px
-  hom-entity-padding-desktop: 40px
-  hom-entity-padding-mobile: 20px
-  hom-entity-name-font-desktop: 18px
-  hom-entity-state-font-desktop: 15px
+  hemma-entity-height-desktop: 180px
+  hemma-entity-height-mobile: 120px
+  hemma-entity-padding-desktop: 40px
+  hemma-entity-padding-mobile: 20px
+  hemma-entity-name-font-desktop: 18px
+  hemma-entity-state-font-desktop: 15px
 
   # - Use Preset A for 1-row carousel
   # - Use Preset B for 2-row grid
   # (only one preset block should be uncommented at a time)
 
   # Preset A (1-Row Carousel)
-  hom-entity-rows-desktop: repeat(1, auto)
-  hom-entity-col-width-desktop: 280px
-  hom-entity-justify-desktop: flex-start
-  hom-entity-right-inset-desktop: 0px
-  hom-entity-bottom-desktop: 40px
-  hom-entity-shadow-pad-right-desktop: 0px
-  hom-entity-overflow-y-desktop: hidden
+  hemma-entity-rows-desktop: repeat(1, auto)
+  hemma-entity-col-width-desktop: 280px
+  hemma-entity-justify-desktop: flex-start
+  hemma-entity-right-inset-desktop: 0px
+  hemma-entity-bottom-desktop: 40px
+  hemma-entity-shadow-pad-right-desktop: 0px
+  hemma-entity-overflow-y-desktop: hidden
 
   # Preset B (2-Row Grid)
-  # hom-entity-rows-desktop: repeat(2, auto)
-  # hom-entity-col-width-desktop: 250px
-  # hom-entity-justify-desktop: center
-  # hom-entity-right-inset-desktop: var(--page-gutter, 8vw)
-  # hom-entity-bottom-desktop: 30px
-  # hom-entity-shadow-pad-right-desktop: 16px
-  # hom-entity-overflow-y-desktop: visible
+  # hemma-entity-rows-desktop: repeat(2, auto)
+  # hemma-entity-col-width-desktop: 250px
+  # hemma-entity-justify-desktop: center
+  # hemma-entity-right-inset-desktop: var(--page-gutter, 8vw)
+  # hemma-entity-bottom-desktop: 30px
+  # hemma-entity-shadow-pad-right-desktop: 16px
+  # hemma-entity-overflow-y-desktop: visible
 
   # Entity Variables
-  hom-entity-active: rgba(255,255,255,1)
-  hom-entity-inactive: rgba(255,255,255,.75)
-  hom-entity-picture-inactive-opacity: .75
-  hom-entity-picture-active-opacity: 1
-  hom-entity-picture-inactive-filter: brightness(.75) saturate(.9)
-  hom-entity-picture-active-filter: none
-  hom-entity-text-shadow: 0 0 3px rgba(0, 0, 0, 0.15)
+  hemma-entity-active: rgba(255,255,255,1)
+  hemma-entity-inactive: rgba(255,255,255,.75)
+  hemma-entity-picture-inactive-opacity: .75
+  hemma-entity-picture-active-opacity: 1
+  hemma-entity-picture-inactive-filter: brightness(.75) saturate(.9)
+  hemma-entity-picture-active-filter: none
+  hemma-entity-text-shadow: 0 0 3px rgba(0, 0, 0, 0.15)
 
   # Temperature Formatting
   hero-temp-font-size-desktop: 18px
@@ -318,7 +318,7 @@ hom:
   clear-background-color: var(--ha-card-background)
   
   # Card Mod
-  card-mod-theme: "hom"
+  card-mod-theme: "Hemma"
 
   card-mod-root-yaml: |
     .: |
@@ -336,23 +336,23 @@ hom:
 
         :root {
           --page-gutter: var(--page-gutter-desktop);
-          --hom-rail-left: var(--page-gutter-desktop);
-          --content-rail: calc(var(--hom-rail-left) + var(--hom-entity-padding-desktop, 40px));
+          --hemma-rail-left: var(--page-gutter-desktop);
+          --content-rail: calc(var(--hemma-rail-left) + var(--hemma-entity-padding-desktop, 40px));
         }
 
         @media (min-width: 769px) and (max-width: 1249px) {
           :root {
             --page-gutter: var(--page-gutter-tablet);
-            --hom-rail-left: var(--page-gutter-tablet);
-            --content-rail: calc(var(--hom-rail-left) + var(--hom-entity-padding-desktop, 40px));
+            --hemma-rail-left: var(--page-gutter-tablet);
+            --content-rail: calc(var(--hemma-rail-left) + var(--hemma-entity-padding-desktop, 40px));
           }
         }
 
         @media (max-width: 768px), (max-height: 500px) {
           :root {
             --page-gutter: var(--page-gutter-mobile);
-            --hom-rail-left: var(--page-gutter-mobile);
-            --content-rail: calc(var(--hom-rail-left) + var(--hom-entity-padding-mobile, 20px));
+            --hemma-rail-left: var(--page-gutter-mobile);
+            --content-rail: calc(var(--hemma-rail-left) + var(--hemma-entity-padding-mobile, 20px));
           }
         }
 
@@ -363,14 +363,14 @@ hom:
           }
         }
 
-        .hom-entities,
-        .hom-entities > div {
+        .hemma-entities,
+        .hemma-entities > div {
           scrollbar-width: none;
           -ms-overflow-style: none;
         }
 
-        .hom-entities::-webkit-scrollbar,
-        .hom-entities > div::-webkit-scrollbar {
+        .hemma-entities::-webkit-scrollbar,
+        .hemma-entities > div::-webkit-scrollbar {
           width: 0 !important;
           height: 0 !important;
           background: transparent !important;
@@ -422,7 +422,7 @@ hom:
             height: 170px;
             pointer-events: none;
             z-index: 2;
-            background: var(--hom-nav-fade, linear-gradient(
+            background: var(--hemma-nav-fade, linear-gradient(
               to top,
               rgba(0,0,0,0.82) 0%,
               rgba(0,0,0,0.0) 65%
@@ -437,19 +437,19 @@ hom:
     }
 
     @media (hover:hover) {
-      :host(:not(.hom-hero)) ha-card:hover,
-      :host(:not(.hom-hero)) ha-card:focus-within {
-        filter: var(--hom-hover-filter, brightness(1.10)) !important;
+      :host(:not(.hemma-hero)) ha-card:hover,
+      :host(:not(.hemma-hero)) ha-card:focus-within {
+        filter: var(--hemma-hover-filter, brightness(1.10)) !important;
       }
     }
 
     @media (hover:none) {
-      :host(:not(.hom-hero)) ha-card:active {
-        filter: var(--hom-hover-filter, brightness(1.12)) !important;
+      :host(:not(.hemma-hero)) ha-card:active {
+        filter: var(--hemma-hover-filter, brightness(1.12)) !important;
       }
     }
 
-    :host(.hom-entity) {
+    :host(.hemma-entity) {
       position: relative !important;
       z-index: 0 !important;
       display: block !important;
@@ -459,7 +459,7 @@ hom:
       box-shadow: var(--button-card-box-shadow, var(--ha-card-box-shadow)) !important;
     }
 
-    :host(.hom-entity) ha-card {
+    :host(.hemma-entity) ha-card {
       position: relative !important;
       z-index: 0 !important;
       border-radius: inherit !important;
@@ -468,7 +468,7 @@ hom:
       box-shadow: none !important;
     }
 
-    :host(.hom-entity) ha-card::before {
+    :host(.hemma-entity) ha-card::before {
       content:"";
       position:absolute;
       inset:0;
@@ -494,7 +494,7 @@ hom:
       mix-blend-mode: multiply;
     }
 
-    :host(.hom-entity) ha-card:active {
+    :host(.hemma-entity) ha-card:active {
       transform: translateY(.5px);
       backface-visibility: hidden;
       will-change: transform;

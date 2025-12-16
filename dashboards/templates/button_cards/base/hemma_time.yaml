@@ -1,6 +1,6 @@
-hom_time:
+hemma_time:
   template:
-    - hom_default
+    - hemma_default
   name: |
     [[[ 
         return states["sensor.current_time_us"].state

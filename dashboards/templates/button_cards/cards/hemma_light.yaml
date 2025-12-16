@@ -1,13 +1,29 @@
-hom_light:
+hemma_light:
   template:
-    - hom_entity
+    - hemma_entity
   show_last_changed: false
   state_display: >
     [[[
-      const count = parseInt(states['sensor.lights_on_count']?.state ?? '0');
-      if (isNaN(count) || count === 0) return "All off";
-      if (count === 1) return "1 on";
-      return `${count} on`;
+      const expand = (eid, seen = new Set()) => {
+        if (!eid || seen.has(eid)) return [];
+        seen.add(eid);
+
+        const st = states[eid];
+        if (!st) return [];
+
+        const members = st.attributes?.entity_id;
+        if (Array.isArray(members)) {
+          return members.flatMap(m => expand(m, seen));
+        }
+
+        return [eid];
+      };
+
+      const root = entity?.entity_id;
+      const all = [...new Set(expand(root))].filter(eid => eid.startsWith("light."));
+      const onCount = all.filter(eid => states[eid]?.state === "on").length;
+
+      return onCount > 0 ? `${onCount} On` : "Off";
     ]]]
   tap_action:
     action: more-info
@@ -74,12 +90,12 @@ hom_light:
             - overflow: visible
           track:
             - height: 8px
-            - background: var(--hom-slider-track)
+            - background: var(--hemma-slider-track)
             - border-radius: 20px
             - transition: background .2s ease
           progress:
             - height: 8px
-            - background: var(--hom-slider-progress)
+            - background: var(--hemma-slider-progress)
             - border-radius: 20px
             - transition: background .2s ease
           thumb:
@@ -92,8 +108,8 @@ hom_light:
                   return (window.innerWidth <= 768) ? '14px' : '16px';
                 ]]]
             - border-radius: 9999px
-            - background: var(--hom-slider-thumb)
+            - background: var(--hemma-slider-thumb)
             - transform: translateY(-3px)
-            - box-shadow: var(--hom-slider-shadow)
+            - box-shadow: var(--hemma-slider-shadow)
             - transition: box-shadow .15s ease, transform .15s ease
 

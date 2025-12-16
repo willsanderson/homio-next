@@ -1,4 +1,4 @@
-hom_default:
+hemma_default:
   styles:
     card:
       - "--button-card-ripple-color": transparent
