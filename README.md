@@ -181,6 +181,4 @@ Because it’s all YAML, you can copy/paste specific cards or layouts into your 
 - Original Homio concept and base implementation: [iamtherufus/Homio](https://github.com/iamtherufus/Homio)
 - Hemma customization and ongoing tweaks: [@willsanderson](https://github.com/willsanderson)
 
-**License:** MIT (same as the original Homio project).
-
 
