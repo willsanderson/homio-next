@@ -24,7 +24,7 @@ Hemma keeps the same basic structure (YAML dashboard, helpers, theme), but chang
 
 ## :question: What’s different in Hemma
 
-Hōm adds new features and changes including:
+Hemma adds new features and changes including:
 
 - **New light/dark tuning**  
   - Refined card backgrounds, shadows, and typography  
