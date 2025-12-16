@@ -1,44 +1,43 @@
-# :house: Hōm
+## :house: Hemma for Home Assistant
 
 A modern mobile-friendly fork of the original [Homio](https://github.com/iamtherufus/Homio) dashboard by iamtherufus for Home Assistant, featuring light and dark mode, redesigned cards, new custom badges, and media integration.
 
-## Desktop View (Single Row)
+### Desktop View (Single Row)
 ![home-desktop-light](https://github.com/user-attachments/assets/b31d7a32-6abe-44f0-b0d5-c01326f89420)
 ![living-room-desktop-light](https://github.com/user-attachments/assets/026bd382-a8bb-4189-80d1-2bb1dadf90a4)
 ![bedroom-desktop-light](https://github.com/user-attachments/assets/e2b8b2fc-f049-4eb1-964d-dc0cec16fd33)
 
-## Desktop View (Two Rows)
+### Desktop View (Two Rows)
 ![living-room-desktop-light-alt](https://github.com/user-attachments/assets/b3e7769a-3679-460e-b6a7-3fcade12adfe)
 
 ---
 
-## Based on Homio
+### Based on Homio
 
-This project is built on top of the excellent work in [iamtherufus/Homio](https://github.com/iamtherufus/Homio).  
-If you’re new to Homio in general, you should absolutely read their README first for the full background, philosophy, and original setup guide:
+This project is built on top of the excellent work in [iamtherufus/Homio](https://github.com/iamtherufus/Homio). If you’re new to Homio in general, you should absolutely read their README first for the full background, philosophy, and original setup guide:
 
 > 👉 Original project & docs: https://github.com/iamtherufus/Homio
 
-Hōm keeps the same basic structure (YAML dashboard, helpers, theme), but changes the look, layout, and many of the UI details.
+Hemma keeps the same basic structure (YAML dashboard, helpers, theme), but changes the look, layout, and many of the UI details.
 
 ---
 
-## :question: What’s different in Hōm
+### :question: What’s different in Hemma
 
-Hōm adds new features and changes including:
+Hemma adds new features and changes including:
 
 - **New light/dark tuning**  
   - Refined card backgrounds, shadows, and typography  
   - Dark mode adjusted for better contrast and “liquid glass” style cards
 
 - **Updated layouts and cards**  
-  - Refined screen layout includes (`hom_screen_layout.yaml`, `hom_entity_layout.yaml`)  
+  - Refined screen layout includes (`hemma_screen_layout.yaml`, `hemma_entity_layout.yaml`)  
   - Adjusted spacing, grid behavior, and row heights for desktop/tablet/mobile
   - New button cards including unified thermostat card for heating/cooling, curtain card, fan card, media card
 
 - **Navigation & mobile behavior**  
-  - Custom mobile navbar (`hom_navbar_mobile.yaml`) tuned for smaller screens  
-  - Improved navigation templates (`hom_navigation.yaml`, `hom_navigation_list.yaml`)
+  - Custom mobile navbar (`hemma_navbar_mobile.yaml`) tuned for smaller screens  
+  - Improved navigation templates (`hemma_navigation.yaml`, `hemma_navigation_list.yaml`)
 
 - **Badges**  
   - New custom badges for room sensors and presence status  
@@ -46,11 +45,11 @@ Hōm adds new features and changes including:
 
 Under the hood it’s still YAML files you can read, copy, and modify. This repo just collects my version into a reusable package.
 
-## Light/Dark Mode
+### Light/Dark Mode
 ![bedroom-desktop-light](https://github.com/user-attachments/assets/b3abc58d-4507-4a97-9a34-20031b3094ef)
 ![bedroom-desktop-dark](https://github.com/user-attachments/assets/f37cb67b-55b0-4ccd-b392-7f5c8269fb27)
 
-## Boxy Button Cards
+### Boxy Button Cards
 ![living-room-desktop-light-box](https://github.com/user-attachments/assets/2cb3c1fb-9edd-4970-b268-a8f7c4a73127)
 
 ## Mobile View
@@ -59,7 +58,7 @@ Under the hood it’s still YAML files you can read, copy, and modify. This repo
 
 ---
 
-## :heavy_exclamation_mark: Requirements
+### :heavy_exclamation_mark: Requirements
 
 You’ll need:
 
@@ -76,7 +75,7 @@ https://github.com/iamtherufus/Homio#-getting-started
 
 ---
 
-## :file_folder: Folder layout
+### :file_folder: Folder layout
 
 Everything in this repo is meant to live under `/config` in your Home Assistant installation.
 
@@ -85,29 +84,29 @@ Example layout:
 ```text
 /config
 └── dashboards/
-    └── hom/
-        └── hom.yaml            # Main Hōm dashboard
+    └── hemma/
+        └── hemma.yaml            # Main Hemma dashboard
 └── dashboards/templates/includes/
-    ├── hom_screen_layout.yaml
-    ├── hom_entity_layout.yaml
-    ├── hom_navbar_mobile.yaml
-    ├── hom_navigation.yaml
-    └── hom_navigation_list.yaml
+    ├── hemma_screen_layout.yaml
+    ├── hemma_entity_layout.yaml
+    ├── hemma_navbar_mobile.yaml
+    ├── hemma_navigation.yaml
+    └── hemma_navigation_list.yaml
 └── themes/
-    └── hom-next/
-        └── hom-next.yaml       # Hōm theme
+    └── hemma-next/
+        └── hemma-next.yaml       # Hemma theme
 └── packages/
-    └── hom_helpers.yaml        # Helpers required by the dashboard
+    └── hemma_helpers.yaml        # Helpers required by the dashboard
 └── www/
-    └── hom/
+    └── hemma/
         ├── icons/                # UI icons
         └── images/               # Room/Background images
 
 ```
 
-## :rocket: Installation
+### :rocket: Installation
 
-### 1. Do the base Homio-style setup
+#### 1. Do the base Homio-style setup
 
 If you’ve never used Homio before, follow the original README’s **Getting Started** section to:
 
@@ -123,22 +122,22 @@ You don’t have to install the original Homio dashboard itself, but the environ
 
 ---
 
-### 2. Copy Hōm files into your config
+#### 2. Copy/Overwrite Hemma files into your config
 
 From this repo, copy the following into your Home Assistant `/config` directory:
 
-- `dashboards/hom/` → `/config/dashboards/hom/`
+- `dashboards/hemma/` → `/config/dashboards/hemma/`
 - `dashboards/templates/includes/` → `/config/dashboards/templates/includes/`  
   (merge with your existing templates folder if you already have one)
-- `themes/hom/` → `/config/themes/hom/`
-- `packages/hom_helpers.yaml` → `/config/packages/`
-- `www/hom/` → `/config/www/hom/`  
+- `themes/hemma/` → `/config/themes/hemma/`
+- `packages/hemma_helpers.yaml` → `/config/packages/`
+- `www/hemma/` → `/config/www/hemma/`  
 
 Restart Home Assistant or reload themes/resources as needed.
 
 ---
 
-### 3. Register the dashboard
+#### 3. Register the dashboard
 
 In `configuration.yaml` add the following:
 
@@ -148,39 +147,39 @@ lovelace:
   dashboards:
     dashboard-hom:
       mode: yaml
-      title: "Hōm"
+      title: "Hemma"
       icon: mdi:home
       show_in_sidebar: true
-      filename: dashboards/hom/hom.yaml
+      filename: dashboards/hemma/hemma.yaml
 ```
 
-Restart Home Assistant, then refresh your browser and open **Hōm** from the sidebar.
+Restart Home Assistant, then refresh your browser and open **Hemma** from the sidebar.
 
 ---
 
-### 4. Configure entities & helpers
+#### 4. Configure entities & helpers
 
 - Update entity IDs in the YAML files to match your own setup (lights, media players, sensors, etc.).
-- Make sure everything defined in `packages/hom_helpers.yaml` exists in your config and uses the correct entity IDs.
+- Make sure everything defined in `packages/hemma_helpers.yaml` exists in your config and uses the correct entity IDs.
 
 ---
 
-## :pencil: Customization
+### :pencil: Customization
 
 This repo is intended as a starting point:
 
-- Swap out room/background images in `www/hom/images/`.
-- Tweak theme colors, shadows, and typography in `themes/hom/hom.yaml`.
-- Adjust layouts (`hom_entity_layout.yaml`, etc.) to match your devices and preferences.
+- Swap out room/background images in `www/hemma/images/`.
+- Tweak theme colors, shadows, and typography in `themes/hemma/hemma.yaml`.
+- Adjust layouts (`hemma_entity_layout.yaml`, etc.) to match your devices and preferences.
 
 Because it’s all YAML, you can copy/paste specific cards or layouts into your own dashboards if you don’t want the full setup.
 
 ---
 
-## :trophy: Credits
+### :trophy: Credits
 
 - Original Homio concept and base implementation: [iamtherufus/Homio](https://github.com/iamtherufus/Homio)
-- Hōm customization and ongoing tweaks: [@willsanderson](https://github.com/willsanderson)
+- Hemma customization and ongoing tweaks: [@willsanderson](https://github.com/willsanderson)
 
 **License:** MIT (same as the original Homio project).
 
