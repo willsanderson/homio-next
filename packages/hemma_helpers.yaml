@@ -1,27 +1,27 @@
 input_boolean:
-  hom_cooling_control:
+  hemma_cooling_control:
     name: Cooling Control
     initial: off
-  hom_heating_control:
+  hemma_heating_control:
     name: Heating Control
     initial: off
-  hom_hot_water_control:
+  hemma_hot_water_control:
     name: Hot Water Control
     initial: off
-  hom_mobile_navigation:
+  hemma_mobile_navigation:
     name: Mobile Navigation
     initial: off
 input_number:
-  hom_thermostat_target_temperature:
-    name: hom Thermostat Target Temperature
+  hemma_thermostat_target_temperature:
+    name: Hemma Thermostat Target Temperature
     min: 68
     max: 75
     step: 1
     unit_of_measurement: "°F"
     mode: slider
 input_select:
-  hom_thermostat_mode:
-    name: hom Thermostat Mode
+  hemma_thermostat_mode:
+    name: Hemma Thermostat Mode
     options:
       - cool
       - heat
