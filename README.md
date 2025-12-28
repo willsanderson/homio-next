@@ -92,8 +92,8 @@ Example layout:
     ├── hemma_navigation.yaml
     └── hemma_navigation_list.yaml
 └── themes/
-    └── hemma-next/
-        └── hemma-next.yaml        # Hemma theme
+    └── hemma/
+        └── hemma.yaml             # Hemma theme
 └── packages/
     └── hemma_helpers.yaml         # Helpers required by the dashboard
 └── www/
