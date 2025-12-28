@@ -26,8 +26,8 @@ hemma_room:
     show_motion: false
     motion_sensor: binary_sensor.hue_motion_sensor_motion
     show_presence: false
-    presence_entity_1: sensor.will_status
-    presence_entity_2: sensor.andrew_status
+    presence_entity_1: sensor.person_1
+    presence_entity_2: sensor.person_2
     show_media_badge: false
 
   tap_action: { action: none }
