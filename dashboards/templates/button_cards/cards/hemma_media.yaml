@@ -30,11 +30,11 @@ hemma_media:
       const cap  = (x) => (x ? x.charAt(0).toUpperCase() + x.slice(1) : "");
 
       if (s === "playing") {
-        const title   = (a.media_title || "").trim();
-        const app     = (a.app_name || "").trim();
-        const source  = (a.source || a.media_channel || "").trim();
-        const type    = String(a.media_content_type || "").toLowerCase();
-        const id      = entity?.entity_id || "";
+        const title    = (a.media_title || "").trim();
+        const app      = (a.app_name || "").trim();
+        const source   = (a.source || a.media_channel || "").trim();
+        const type     = String(a.media_content_type || "").toLowerCase();
+        const id       = entity?.entity_id || "";
         const friendly = (a.friendly_name || "").toLowerCase();
         const label = title || app || source || cap(s);
         const isSonos = id.includes("sonos") || friendly.includes("sonos");
@@ -52,6 +52,7 @@ hemma_media:
             looksLikeBareInput = true;
           }
         }
+
         const hasRichMeta =
           !!(a.media_artist || a.media_album_artist || a.media_series_title || a.media_episode_title);
         const mediaTypes = ["music","movie","video","tvshow"];
@@ -69,10 +70,7 @@ hemma_media:
         }
 
         return `
-          <span class="hemma-media-state">
-            <ha-icon icon="mdi:play" style="--mdc-icon-size: 16px; margin-right: 6px;"></ha-icon>
-            <span>${label}</span>
-          </span>
+          <span class="hemma-media-state">${label}</span>
         `;
       }
 
