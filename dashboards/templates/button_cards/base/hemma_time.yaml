@@ -1,32 +1,58 @@
 hemma_time:
   template:
     - hemma_default
+
   variables:
     time_entity: sensor.time
+
+    # Whether to convert to 12h with AM/PM
     use_12h: true
+
+    # Optional label after the time, e.g. "UHR", "HRS"
+    time_suffix:
+
   triggers_update:
     - '[[[ return variables.time_entity || "sensor.time" ]]]'
+
   name: >
     [[[
       const id  = variables.time_entity || "sensor.time";
       const ent = states[id];
       if (!ent) return "";
-      const raw   = String(ent.state || "");
-      const use12 = variables.use_12h === true;
-      const lastComma = raw.lastIndexOf(",");
-      const timePart = (lastComma >= 0 ? raw.slice(lastComma + 1) : raw).trim();
-      if (!timePart) return raw.toUpperCase();
-      if (!use12) {
-        return timePart.toUpperCase();
+
+      const raw    = String(ent.state || "");
+      const use12  = variables.use_12h === true;
+      const suffix = (variables.time_suffix || "").toString().trim();
+
+      const to12h = (timeStr) => {
+        const m = String(timeStr).match(/^(\d{1,2}):(\d{2})$/);
+        if (!m) return timeStr;
+        let h = parseInt(m[1], 10);
+        const min = m[2];
+        const ampm = h >= 12 ? "PM" : "AM";
+        h = h % 12;
+        if (h === 0) h = 12;
+        return `${h}:${min} ${ampm}`;
+      };
+
+      let timePart = raw;
+      if (raw.includes(",")) {
+        const parts = raw.split(",");
+        timePart = (parts[1] || "").trim() || raw;
       }
-      const [hStr, mStr] = timePart.split(":");
-      const h24 = Number(hStr);
-      if (Number.isNaN(h24)) return timePart.toUpperCase();
-      const ampm = h24 >= 12 ? "PM" : "AM";
-      let h12 = h24 % 12;
-      if (h12 === 0) h12 = 12;
-      return `${h12}:${mStr} ${ampm}`.toUpperCase();
+
+      let display = timePart;
+      if (use12 && /^\d{1,2}:\d{2}$/.test(timePart)) {
+        display = to12h(timePart);
+      }
+
+      if (suffix) {
+        display = `${display} ${suffix}`;
+      }
+
+      return display.toUpperCase();
     ]]]
+
   styles:
     name:
       - color: var(--primary-text-color)
