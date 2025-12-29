@@ -215,14 +215,30 @@ This repo is intended as a starting point:
 - Tweak theme colors, shadows, and typography in `themes/hemma/hemma.yaml`.
 - Adjust layouts (`hemma_entity_layout.yaml`, etc.) to match your devices and preferences.
 
-Because it’s all YAML, you can copy/paste specific cards or layouts into your own dashboards if you don’t want the full setup.
-
 #### Button Card Icons
 
 To add additional button card icons, you can download them from the link below and place the icons in the `www/hemma/icons/` folder:
 
 https://fonts.google.com/icons?icon.query=light (Weight: 100)
 
+#### Time
+
+You can switch from 12hr to 24hr time in by switching the variables in `hemma_time.yaml`, example below:
+
+```yaml
+hemma_time:
+  template:
+    - hemma_default
+
+  variables:
+    time_entity: sensor.time
+
+    # Whether to convert to 12h with AM/PM
+    use_12h: false
+
+    # Optional label after the time, e.g. "UHR", "HRS"
+    time_suffix: "UHR"
+```
 ---
 
 ### :trophy: Credits
