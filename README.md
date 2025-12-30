@@ -3,11 +3,8 @@
 A modern, minimal, mobile-friendly dashboard for Home Assistant. Based on the [Homio](https://github.com/iamtherufus/Homio) dashboard by iamtherufus, Hemma features light and dark mode, redesigned cards, new custom badges, and media integration.
 
 ### Desktop View
-![home-light-desktop](https://github.com/user-attachments/assets/fb7d9c83-01f5-4d0d-ad01-7c2a73d0c962)
-![livingroom-light-desktop](https://github.com/user-attachments/assets/9a2885f0-7f6c-496e-97ca-2afe51dbedb1)
-
-### Desktop View (Two Rows)
-![two-rows-desktop](https://github.com/user-attachments/assets/01703da5-fb46-41ad-b8db-25b71dc37a0c)
+![home-light](https://github.com/user-attachments/assets/faf1c2a3-345a-4a9d-933a-e911be91d238)
+![livingroom-light](https://github.com/user-attachments/assets/3a3e89d7-8e4b-41a6-a5e9-a6e269b1fab9)
 
 ---
 
@@ -45,15 +42,14 @@ Hemma adds new features and changes including:
 Under the hood it’s still YAML files you can read, copy, and modify. This repo just collects my version into a reusable package.
 
 ### Light/Dark Mode
-![bedroom-light-desktop](https://github.com/user-attachments/assets/676da721-967f-4616-8fdb-491669c86791)
-![bedroom-dark-desktop](https://github.com/user-attachments/assets/0c564fa8-04b1-4f31-bd34-0c9eb879568f)
+![bedroom-light](https://github.com/user-attachments/assets/5daccd80-9e9a-4523-84a5-b1d281311d0c)
+![bedroom-dark](https://github.com/user-attachments/assets/1abee5db-f7d1-44bf-91ec-6bb3d0c34142)
 
 ### Boxy Button Cards
-![boxy-buttons](https://github.com/user-attachments/assets/b58af702-51e9-4c2b-aaa6-f8fbab02e294)
+![livingroom-light-box](https://github.com/user-attachments/assets/d45fba70-b3a6-46b6-81cf-2c98d2d8389f)
 
-
-## Mobile View
-![home-light-mobile](https://github.com/user-attachments/assets/313d58d0-4518-421e-a1f2-a9a520d23ab8)  &nbsp; &nbsp; &nbsp;![livingroom-dark-mobile](https://github.com/user-attachments/assets/fbe5c0ce-7c6d-4c0f-b51a-5566c5973217)
+## Mobile View (Light and Dark Modes)
+![home-light-mobile](https://github.com/user-attachments/assets/923c3540-b0fd-43b8-bc84-dc601f658059)  &nbsp; &nbsp; &nbsp;![home-dark-mobile](https://github.com/user-attachments/assets/df3e635f-e8ab-45a9-89b7-0003aaf11198)
 
 ---
 
