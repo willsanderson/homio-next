@@ -215,7 +215,7 @@ This repo is intended as a starting point:
 
 To add additional button card icons, you can download them from the link below and place the icons in the `www/hemma/icons/` folder:
 
-https://fonts.google.com/icons?icon.query=light (Weight: 100)
+https://fonts.google.com/icons?icon.query=light (Weight 200 is recommended)
 
 #### Time
 
