@@ -140,7 +140,7 @@ In `configuration.yaml` add the following:
 lovelace:
   mode: storage
   dashboards:
-    dashboard-hom:
+    dashboard-hemma:
       mode: yaml
       title: "Hemma"
       icon: mdi:home
