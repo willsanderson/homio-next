@@ -60,7 +60,7 @@ You’ll need:
 - Lovelace in **storage** mode (so you can keep using the UI editor for other dashboards)
 - Custom cards (install via HACS or manual, and ensure they’re added as Lovelace resources):
   - [button-card](https://github.com/custom-cards/button-card)
-  - [layout-card](https://github.com/thomasloven/lovelace-layout-card) (Homio originally uses a slightly modified version; check the original repo if you want to stick to that approach.)
+  - [layout-card](https://github.com/thomasloven/lovelace-layout-card) (Homio and Hemma uses a slightly modified version)
   - [lovelace-navbar-card](https://github.com/joseluis9595/lovelace-navbar-card) (for mobile view navigation)
   - Any additional cards you use in your setup (e.g. `browser_mod`, `auto-entities`, etc.)
 
