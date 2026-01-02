@@ -172,32 +172,22 @@ Restart Home Assistant, then refresh your browser and open **Hemma** from the si
     image: home-demo
     image_position: center center
 
-    # Optional environment badges
     show_temp: true
     temp_sensor: sensor.home_temperature
-    show_quality: false
-    quality_sensor: sensor.home_air_quality
-    show_humid: false
-    humid_sensor: sensor.home_humidity
+
     show_presence: true
-    presence_entity_1: sensor.person_1
-    presence_entity_2: sensor.person_2
+    presence_entity_1: sensor.someone
+    presence_entity_2: sensor.someone_else
 
-    # Enable the media badge row
     show_media_badge: true
-
-    # Up to four media players
     show_media_player_1: true
     media_player_1: media_player.spotify
-
     show_media_player_2: true
     media_player_2: media_player.living_room_apple_tv
-
     show_media_player_3: true
-    media_player_3: media_player.kitchen
-
+    media_player_3: media_player.bedroom_apple_tv
     show_media_player_4: true
-    media_player_4: media_player.bedroom_apple_tv
+    media_player_4: media_player.kitchen
 ```
 
 ---
