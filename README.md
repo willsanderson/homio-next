@@ -62,7 +62,6 @@ You’ll need:
   - [button-card](https://github.com/custom-cards/button-card)
   - [layout-card](https://github.com/thomasloven/lovelace-layout-card) (Homio originally uses a slightly modified version; check the original repo if you want to stick to that approach.)
   - [lovelace-navbar-card](https://github.com/joseluis9595/lovelace-navbar-card) (for mobile view navigation)
-  - [my-slider-v2](https://github.com/AnthonMS/my-cards/blob/main/docs/cards/slider-v2.md) (for light sliders)
   - Any additional cards you use in your setup (e.g. `browser_mod`, `auto-entities`, etc.)
 
 For exact resource paths and the original recommended setup, refer to the **Getting Started** section in the Homio README:  
