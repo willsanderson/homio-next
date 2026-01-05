@@ -4,6 +4,62 @@ hemma_entity:
   class: hemma-entity
   show_state: true
   show_entity_picture: true
+  show_icon: false
+
+  triggers_update:
+    - '[[[ return variables.battery_entity || "" ]]]'
+
+  variables:
+    battery_entity: null
+    battery_low_threshold: 20
+
+  extra_styles: |
+    #battery{
+      opacity: 0;
+      transform: scale(.92);
+      transition: opacity .8s ease, transform .3s ease;
+      will-change: opacity, transform;
+    }
+
+    @media (hover: hover) and (pointer: fine){
+      :host(:hover) #battery,
+      :host(:focus-within) #battery{
+        opacity: .6;
+        transform: scale(1);
+      }
+    }
+
+    @media (hover: none) and (pointer: coarse){
+      #battery{ opacity: 0; }
+    }
+
+
+  custom_fields:
+    battery: |
+      [[[
+        const batt = variables.battery_entity;
+        if (!batt) return "";
+        const st = states[batt];
+        if (!st) return "";
+        const raw = (st.state ?? "").toString().toLowerCase();
+        const isLowWord = ["low", "critical"].includes(raw);
+        const n = parseFloat(raw);
+        const hasNum = Number.isFinite(n);
+        const threshold = Number(variables.battery_low_threshold ?? 20);
+        const isLowNum = hasNum && n <= threshold;
+        if (!(isLowWord || isLowNum)) return "";
+        const size = (window.innerWidth <= 768) ? 20 : 24;
+        return `
+          <ha-icon
+            icon="mdi:battery-alert"
+            style="
+              --mdc-icon-size:${size}px;
+              color: var(--hemma-entity-inactive, var(--secondary-text-color));
+              opacity: .7;
+            "
+          ></ha-icon>
+        `;
+      ]]]
 
   entity_picture: |
     [[[
@@ -78,6 +134,16 @@ hemma_entity:
                     transform .14s ease,
                     filter .18s ease
 
+    custom_fields:
+      battery:
+        - position: absolute
+        - top: 24px
+        - right: 22px
+        - line-height: 0
+        - z-index: 3
+        - pointer-events: none
+        - filter: drop-shadow(0 2px 6px rgba(0,0,0,.25))
+
     name:
       - color: var(--hemma-entity-inactive, var(--secondary-text-color)) !important
       - font-weight: 600
@@ -133,13 +199,13 @@ hemma_entity:
           [[[
             return (window.innerWidth <= 768)
               ? 'var(--hemma-entity-icon-size-mobile, 26px)'
-              : 'var(--hemma-entity-icon-size-desktop, 28px)';
+              : 'var(--hemma-entity-icon-size-desktop, 30px)';
           ]]]
       - height: |
           [[[
             return (window.innerWidth <= 768)
               ? 'var(--hemma-entity-icon-size-mobile, 26px)'
-              : 'var(--hemma-entity-icon-size-desktop, 28px)';
+              : 'var(--hemma-entity-icon-size-desktop, 30px)';
           ]]]
       - background: transparent
       - transition: opacity .18s ease, filter .18s ease

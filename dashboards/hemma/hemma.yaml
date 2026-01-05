@@ -70,25 +70,27 @@ views:
               temp_sensor: sensor.home_temperature
 
           - type: custom:button-card
-            variables: { icon: door }
-            template: [hemma_entity]
+            template: hemma_entity
             entity: lock.front_door
             name: Front Door
+            variables:
+              icon: door
+              battery_entity: sensor.front_door_lock_battery
 
           - type: custom:button-card
-            template: [hemma_light]
-            variables: { icon: light }
-            tap_action:
-              action: more-info
-              entity: light.all
+            template: hemma_light
             entity: light.all
             name: Lights
+            variables:
+              icon: light
 
           - type: custom:button-card
-            variables: { icon: doorbell }
-            template: [hemma_doorbell]
+            template: hemma_entity
             entity: camera.front_door_live_view
             name: Doorbell
+            variables:
+              icon: doorbell
+              battery_entity: sensor.front_door_camera_battery
 
   # ------------------------------------------------------
   # LIVING ROOM
@@ -142,37 +144,42 @@ views:
               temp_sensor: sensor.living_room_temperature
 
           - type: custom:button-card
-            variables: { icon: apple }
-            template: [hemma_media]
+            template: hemma_media
             entity: media_player.living_room_apple_tv
             name: Apple TV
+            variables:
+              icon: apple
 
           - type: custom:button-card
-            variables: { icon: light }
-            template: [hemma_light]
+            template: hemma_light
             entity: light.living_room
             name: Lights
+            variables:
+              icon: light
 
           - type: custom:button-card
-            variables: { icon: tv }
-            template: [hemma_entity]
+            template: hemma_entity
             entity: media_player.living_room_tv
             name: TV
+            variables:
+              icon: tv
 
           - type: custom:button-card
-            variables: { icon: music }
-            template: [hemma_media]
+            template: hemma_media
             entity: media_player.living_room
             name: Sonos
+            variables:
+              icon: music
 
           - type: custom:button-card
-            variables: { icon: fan }
-            template: [hemma_fan]
+            template: hemma_fan
             entity: fan.dyson
             name: Fan
+            variables:
+              icon: fan
 
           - type: custom:button-card
-            template: [hemma_media]
+            template: hemma_media
             entity: media_player.playstation_5
             name: PS5
 
@@ -221,28 +228,32 @@ views:
         layout: !include /config/dashboards/templates/includes/hemma_entity_layout.yaml
         cards:
           - type: custom:button-card
-            variables: { icon: light }
-            template: [hemma_light]
+            template: hemma_light
             entity: light.kitchen
             name: Lights
+            variables:
+              icon: light
 
           - type: custom:button-card
-            variables: { icon: vacuum }
-            template: [hemma_entity]
+            template: hemma_entity
             entity: vacuum.cleanbot
             name: Clean Bot
+            variables:
+              icon: vacuum
 
           - type: custom:button-card
-            variables: { icon: music }
-            template: [hemma_media]
+            template: hemma_media
             entity: media_player.kitchen
             name: Sonos
+            variables:
+              icon: music
 
           - type: custom:button-card
-            variables: { icon: apple }
-            template: [hemma_media]
+            template: hemma_media
             entity: media_player.kitchen_homepod
             name: HomePod
+            variables:
+              icon: apple
 
   # ------------------------------------------------------
   # BEDROOM
@@ -297,43 +308,50 @@ views:
               temp_sensor: sensor.bedroom_temperature
 
           - type: custom:button-card
-            variables: { icon: apple }
-            template: [hemma_media]
+            template: hemma_media
             entity: media_player.bedroom_apple_tv
             name: Apple TV
+            variables:
+              icon: apple
 
           - type: custom:button-card
-            variables: { icon: light }
-            template: [hemma_light]
+            template: hemma_light
             entity: light.bedroom
             name: Lights
+            variables:
+              icon: light
 
           - type: custom:button-card
-            variables: { icon: tv }
-            template: [hemma_entity]
+            template: hemma_entity
             entity: media_player.bedroom_tv
             name: TV
+            variables:
+              icon: tv
 
           - type: custom:button-card
-            variables: { icon: fan }
-            template: [hemma_fan]
+            template: hemma_fan
             entity: fan.snooz
             name: Snooz
+            variables:
+              icon: fan
 
           - type: custom:button-card
-            variables: { icon: fan }
-            template: [hemma_fan]
+            template: hemma_fan
             entity: fan.bedroom
             name: Fan
+            variables:
+              icon: fan
 
           - type: custom:button-card
-            variables: { icon: fan }
-            template: [hemma_fan]
+            template: hemma_fan
             entity: fan.air_purifier
             name: Air Purifier
+            variables:
+              icon: fan
 
           - type: custom:button-card
-            variables: { icon: music }
-            template: [hemma_media]
+            template: hemma_media
             entity: media_player.bedroom
             name: Sonos
+            variables:
+              icon: music

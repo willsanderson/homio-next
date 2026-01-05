@@ -14,11 +14,12 @@ inset: >
        var(--hemma-rail-left, var(--page-gutter, 8vw))
 padding: 20px var(--hemma-entity-shadow-pad-right-desktop, 0px) 40px 0
 box-sizing: border-box
-scroll-snap-type: x mandatory
-scroll-padding-inline: var(--hemma-entity-shadow-pad-right-desktop, 0px)
 overflow-x: auto
 overflow-y: var(--hemma-entity-overflow-y-desktop, hidden)
 -webkit-overflow-scrolling: touch
+scroll-snap-type: x proximity
+overflow-anchor: none
+direction: ltr
 grid-template-rows: var(--hemma-entity-rows-desktop, repeat(1, auto))
 min-height: var(--hemma-entity-height-desktop, 180px)
 align-content: end
