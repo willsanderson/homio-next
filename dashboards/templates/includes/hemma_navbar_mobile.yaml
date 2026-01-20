@@ -350,7 +350,6 @@ cards:
               }));
             ]]]
 
-
   # Landscape (Tablet only)
   - type: conditional
     conditions:
@@ -398,11 +397,11 @@ cards:
           position: fixed !important;
           left: 50% !important;
           transform: translateX(-50%) !important;
-          top: 40px !important;
+          top: 22px !important;
           bottom: auto !important;
           width: fit-content !important;
           border-radius: 9999px !important;
-          padding: 2px !important;
+          padding: 4px !important;
           background: var(--hemma-nav-bg, rgba(255,255,255,0.11)) !important;
           -webkit-backdrop-filter: blur(12px) !important;
           backdrop-filter: blur(12px) !important;
@@ -431,8 +430,7 @@ cards:
           display:flex !important;
           align-items:center !important;
           justify-content:center !important;
-          min-height: 40px !important;
-          padding: 0 8px !important;
+          padding: 0 12px 0 12px !important;
           background: transparent !important;
           overflow: visible !important;
         }
@@ -453,7 +451,7 @@ cards:
           display:inline-flex !important;
           align-items:center !important;
           justify-content:center !important;
-          padding: 8px !important;
+          padding: 12px !important;
           border-radius: 9999px !important;
           line-height: 1 !important;
           white-space: nowrap !important;
@@ -496,10 +494,7 @@ cards:
           min-height: 0 !important;
           width: auto !important;
           min-width: 0 !important;
-
-          padding: 0 !important;
           margin: 0 !important;
-          flex: 0 0 auto !important;
         }
 
         .navbar-card.desktop .button{
@@ -509,8 +504,11 @@ cards:
         }
 
         .navbar-card.desktop .label{
-          padding: 10px 12px !important;
           line-height: 1 !important;
+        }
+
+        .navbar-card.desktop {
+            gap: 5px !important;
         }
 
         .navbar-popup{
