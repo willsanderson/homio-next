@@ -357,7 +357,7 @@ cards:
         entity: input_boolean.hemma_mobile_navigation
         state: "off"
       - condition: screen
-        media_query: "(orientation: landscape) and (min-width: 768px) and (max-width: 1400px)"
+        media_query: "(orientation: landscape) and (min-width: 768px) and (max-width: 1400px) and (hover: none) and (pointer: coarse)"
 
     card:
       type: custom:navbar-card
