@@ -16,13 +16,13 @@ Hemma:
       button-card-box-shadow-active: var(--ha-shadow-light-active)
 
       navbar-primary-color: var(--hemma-nav-icon-active)
-      hemma-nav-bg: rgba(255,255,255,0.06)
-      hemma-nav-border: rgba(255,255,255,0.2)
+      hemma-nav-bg: rgba(255,255,255,0.08)
+      hemma-nav-border: rgba(255,255,255,0.18)
       hemma-nav-shadow: >
-        inset 3px 3px 5px -5px rgba(255,255,255,0.09),
-        inset -3px -3px 5px -5px rgba(255,255,255,0.09),
+        inset 3px 3px 6px -6px rgba(255,255,255,0.4),
+        inset -3px -3px 6px -6px rgba(255,255,255,0.4),
         inset 0 0 3px -1px rgba(255,255,255,0.07),
-        0 3px 9px rgba(0,0,0,0.04)
+        0 3px 9px rgba(0,0,0,0.05)
       hemma-nav-inactive-opacity: .7
       hemma-nav-icon: rgba(255,255,255,.85)
       hemma-nav-icon-active: rgba(255,255,255,1)
