@@ -18,7 +18,7 @@ Hemma keeps the same basic structure (YAML dashboard, helpers, theme), but chang
 
 ---
 
-### :question: What’s different in Hemma
+### New Features and Updates
 
 Hemma adds new features and changes including:
 
