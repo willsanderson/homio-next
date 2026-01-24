@@ -89,12 +89,7 @@ hemma_shared:
       border-radius:inherit;
       pointer-events:none;
       z-index:-1;
-      background: linear-gradient(
-        to bottom,
-        var(--hero-tint-top, rgba(56,56,56,0.50)) 0%,
-        var(--hero-tint-mid, rgba(53,53,53,0.45)) 50%,
-        var(--hero-tint-bottom, rgba(50,50,50,0.40)) 100%
-      );
+      background: var(--hero-tint, rgba(56,56,56,0.50))
     }
 
     @keyframes heroSwap{
