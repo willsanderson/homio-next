@@ -3,8 +3,8 @@
 A modern, minimal, mobile-friendly dashboard for Home Assistant. Based on the [Homio](https://github.com/iamtherufus/Homio) dashboard by iamtherufus, Hemma features redesigned cards, light and dark mode, badge support, and media integration.
 
 ### Desktop View
-![home-light](https://github.com/user-attachments/assets/faf1c2a3-345a-4a9d-933a-e911be91d238)
-![livingroom-light](https://github.com/user-attachments/assets/3a3e89d7-8e4b-41a6-a5e9-a6e269b1fab9)
+![desktop-home-light](https://github.com/user-attachments/assets/b1e2d227-6071-4cff-9f93-9eb226356a0f)
+![desktop-livingroom-light](https://github.com/user-attachments/assets/072aa154-8ae8-4f9d-a32c-7467723ef8dd)
 
 ---
 
@@ -42,14 +42,19 @@ Hemma adds new features and changes including:
 Under the hood it’s still YAML files you can read, copy, and modify. This repo just collects my version into a reusable package.
 
 ### Light/Dark Mode
-![bedroom-light](https://github.com/user-attachments/assets/5daccd80-9e9a-4523-84a5-b1d281311d0c)
-![bedroom-dark](https://github.com/user-attachments/assets/1abee5db-f7d1-44bf-91ec-6bb3d0c34142)
-
-### Boxy Button Cards
-![livingroom-light-box](https://github.com/user-attachments/assets/d45fba70-b3a6-46b6-81cf-2c98d2d8389f)
+![desktop-bedroom-light](https://github.com/user-attachments/assets/dced24c2-a797-4a86-9ff1-5fb885f30c68)
+![desktop-bedroom-dark](https://github.com/user-attachments/assets/53ffa13d-9615-4026-8bea-ab1a029964a0)
 
 ## Mobile View (Light/Dark)
-![home-light-mobile](https://github.com/user-attachments/assets/5b04a7d0-d5bf-4101-ac2d-534a3bcd5113)  &nbsp; &nbsp; &nbsp;![home-dark-mobile](https://github.com/user-attachments/assets/c6791209-f7e3-4e0b-a5d6-adaf1324b9de)
+<img src="https://github.com/user-attachments/assets/ac99f833-c742-4219-abe3-2eda7054d29c" width="400">
+<img src="https://github.com/user-attachments/assets/5b10405d-0a56-4de9-bd93-4a4b5383f96b" width="400">
+
+## Mobile Navigation
+<img src="https://github.com/user-attachments/assets/07548572-d15e-42a2-ad4c-9a04ec62b3a4" width="400">
+<img src="https://github.com/user-attachments/assets/dbd38b12-e279-4f26-8ae5-2bc8164222e9" width="400">
+
+## Tablet View
+![tablet-livingroom-light](https://github.com/user-attachments/assets/b3cd4329-e246-443d-b76a-ec0bcddf1524)
 
 ---
 
