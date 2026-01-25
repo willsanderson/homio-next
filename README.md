@@ -1,6 +1,6 @@
 ## :house: Hemma
 
-A modern, minimal, mobile-friendly dashboard for Home Assistant. Based on the [Homio](https://github.com/iamtherufus/Homio) dashboard by iamtherufus, Hemma features redesigned cards, light and dark mode, badge support, and media integration.
+A modern, minimal, mobile-friendly dashboard for Home Assistant inspired by the [Homio](https://github.com/iamtherufus/Homio) dashboard by iamtherufus. Hemma features frosted glass entity cards, light and dark mode, sensor and media badges, and streamlined navigation controls for desktop, tablet, and mobile devices.
 
 ### Desktop View
 ![desktop-home-light](https://github.com/user-attachments/assets/b1e2d227-6071-4cff-9f93-9eb226356a0f)
@@ -112,7 +112,7 @@ Example layout:
 
 ### 1. Do the base Homio-style setup
 
-If you’ve never used Homio before, follow the original README’s **Getting Started** section to:
+If you’ve never used Homio before, I'd recommend first reviewing the original README’s **Getting Started** section to:
 
 - Make a backup of your current Home Assistant setup.
 - Ensure Lovelace is in **storage** mode.
@@ -122,13 +122,13 @@ If you’ve never used Homio before, follow the original README’s **Getting St
 Original guide:  
 https://github.com/iamtherufus/Homio#-getting-started
 
-You don’t have to install the original Homio dashboard itself, but the environment (resources, mode, etc.) should be set up the same way.
+Note: You don’t have to install the original Homio dashboard itself, but the environment (resources, mode, etc.) should be set up the same way.
 
 ---
 
-### 2. Copy/Overwrite Hemma files into your config
+### 2. Copy Hemma files into your config
 
-From this repo, copy the following into your Home Assistant `/config` directory:
+From this repo, copy (or replace) the following into your Home Assistant `/config` directory:
 
 - `dashboards/hemma/` → `/config/dashboards/hemma/`
 - `dashboards/templates/includes/` → `/config/dashboards/templates/includes/`  
@@ -170,7 +170,7 @@ Restart Home Assistant, then refresh your browser and open **Hemma** from the si
 
 ### :tv: (Optional) Media badges in the home dashboard
 
-- The primary home dashboard can show optional media badges under the room title and appear when media is active.
+- The primary home dashboard can show optional active media player badges under on the Home dashboard.
 - To enable the media badges, locate the `name: Home` view in the `hemma.yaml` dashboard file and add the media variables under `variables:` (example below):
 
 ```yaml
