@@ -1,4 +1,4 @@
-## :house: Hemma
+## :house_with_garden: Hemma
 
 A modern, minimal, mobile-friendly dashboard for Home Assistant inspired by the [Homio](https://github.com/iamtherufus/Homio) dashboard by iamtherufus. Hemma features frosted glass entity cards, light and dark mode, sensor and media badges, and streamlined navigation controls for desktop, tablet, and mobile devices.
 
