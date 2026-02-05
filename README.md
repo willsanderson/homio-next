@@ -1,4 +1,4 @@
-## IMPORTANT UPDATE
+## :heavy_exclamation_mark: IMPORTANT UPDATE
 Currently card-mod 4.2 is not compatible with Hemma, as it does not currently use the media query variables in the theme, causing the mobile/tablet view to use desktop variables. Please continue to use card-mod 4.1 until a fix is released.
 
 ## :house_with_garden: Hemma
@@ -179,7 +179,7 @@ Restart Home Assistant, then refresh your browser and open **Hemma** from the si
   template: hemma_room
   name: Home
   variables:
-    image: home-demo
+    image: home
     image_position: center center
 
     show_temp: true
