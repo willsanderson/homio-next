@@ -290,6 +290,8 @@ hemma_room:
         - justify-self: start
         - margin: 0
         - padding-left: 0
+        - background: transparent !important
+        - background-color: transparent !important
         - margin-left: >
             calc(
               var(--hero-room-name-margin-left-current, 0px) +

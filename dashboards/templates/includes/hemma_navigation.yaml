@@ -215,14 +215,15 @@ card:
           color: var(--navbar-active-color) !important;
         }
 
-        /* Scenes moved from 4th -> 5th because Home is now first */
-        .navbar.desktop .route:nth-child(5) .label{
+        /* Show caret on Scenes button only (position 5, but nth-child(6) due to hidden DOM element)
+           Only Scenes has popup: property - see routes configuration */
+        .navbar.desktop .route:nth-child(6) .label{
           gap: 6px !important;
           padding-right: 0 !important;
           overflow: visible !important;
         }
 
-        .navbar.desktop .route:nth-child(5) .label::after{
+        .navbar.desktop .route:nth-child(6) .label::after{
           content: "\2304" !important;
           display: inline-flex !important;
           align-items: center !important;

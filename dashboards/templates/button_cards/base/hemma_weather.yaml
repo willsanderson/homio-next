@@ -178,6 +178,18 @@ hemma_weather:
         if (t && !t.includes(`state.weather.${condRaw}`)) return t;
       }
 
+      // Map common weather states to proper formatting
+      const weatherMap = {
+        'partlycloudy': 'Partly Cloudy',
+        'clear-night': 'Clear Night',
+        'snowy-rainy': 'Snowy Rainy',
+        'lightning-rainy': 'Lightning Rainy',
+        'windy-variant': 'Windy Variant'
+      };
+
+      if (weatherMap[condRaw]) return weatherMap[condRaw];
+
+      // Fallback: replace delimiters and capitalize
       return condRaw
         .replace(/_/g,' ')
         .replace(/-/g,' ')

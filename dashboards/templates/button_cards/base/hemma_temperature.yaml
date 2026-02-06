@@ -13,6 +13,8 @@
 #   Very Hot:    > 85°F      Very Hot:    > 29°C
 # ============================================================================
 hemma_temperature:
+  class: hemma-room
+
   variables:
     weather_mode: ''
     show_weather: false
@@ -47,6 +49,36 @@ hemma_temperature:
           : (variables.temp_sensor || '');
       ]]]
 
+  extra_styles: |
+    :host,
+    :host(:hover),
+    :host(:focus-within),
+    :host(:active) {
+      background: transparent !important;
+      background-color: transparent !important;
+      border: 0 !important;
+    }
+
+    :host ha-card,
+    :host(:hover) ha-card,
+    :host(:focus-within) ha-card,
+    :host(:active) ha-card {
+      background: transparent !important;
+      background-color: transparent !important;
+      box-shadow: none !important;
+      filter: none !important;
+      transform: none !important;
+      border: 0 !important;
+      border-radius: 0 !important;
+    }
+
+    :host ha-card::before,
+    :host ha-card::after,
+    :host(:hover) ha-card::before,
+    :host(:hover) ha-card::after {
+      display: none !important;
+    }
+
   styles:
     card:
       - background: transparent !important
@@ -54,15 +86,10 @@ hemma_temperature:
       - box-shadow: none !important
       - border: 0 !important
       - outline: none !important
-      - --ha-card-background: transparent
-      - --ha-card-background-active: transparent
-      - --mdc-ripple-press-opacity: 0
-      - --mdc-ripple-hover-opacity: 0
-      - --mdc-ripple-focus-opacity: 0
-      - --mdc-ripple-color: transparent
-      - --paper-ripple-opacity: 0
-      - --paper-ripple-color: transparent
-      - -webkit-tap-highlight-color: transparent
+      - pointer-events: none !important
+    name:
+      - pointer-events: auto !important
+      - cursor: pointer !important
 
     name:
       - margin: 0
@@ -122,7 +149,15 @@ hemma_temperature:
           if (loc && !loc.includes(`state.weather.${condKey}`)) pretty = loc;
         }
         if (!pretty) {
-          pretty = condKey.replace(/_/g,' ').replace(/-/g,' ').replace(/\b\w/g, c => c.toUpperCase());
+          // Map common weather states to proper formatting
+          const weatherMap = {
+            'partlycloudy': 'Partly Cloudy',
+            'clear-night': 'Clear Night',
+            'snowy-rainy': 'Snowy Rainy',
+            'lightning-rainy': 'Lightning Rainy',
+            'windy-variant': 'Windy Variant'
+          };
+          pretty = weatherMap[condKey] || condKey.replace(/_/g,' ').replace(/-/g,' ').replace(/\b\w/g, c => c.toUpperCase());
         }
 
         return `${tempVal}° - ${String(pretty).toUpperCase()}`;
