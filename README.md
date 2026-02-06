@@ -2,9 +2,11 @@
 
 A modern, minimal, mobile-friendly dashboard for Home Assistant inspired by the [Homio](https://github.com/iamtherufus/Homio) dashboard by iamtherufus. Hemma features frosted glass entity cards, light and dark mode, sensor and media badges, and streamlined navigation controls for desktop, tablet, and mobile devices.
 
+![hemma_devices](https://github.com/user-attachments/assets/f66ee922-6e95-45bc-afee-ba12c8869886)
+
 ### Desktop View
-![home-desktop-light](https://github.com/user-attachments/assets/68449a58-4051-4aba-90d0-a56045ff3bfd)
-![livingroom-desktop-light](https://github.com/user-attachments/assets/3172f5ab-5da3-4c70-baea-140732f4067f)
+![home-desktop-light](https://github.com/user-attachments/assets/b5af78be-a028-4bda-bdc5-94298e329d0e)
+![livingroom-desktop-light](https://github.com/user-attachments/assets/21378996-2ddc-4d7a-872f-5565a00422ef)
 
 ---
 
@@ -42,13 +44,13 @@ Hemma adds new features and changes including:
 Under the hood it’s still YAML files you can read, copy, and modify. This repo just collects my version into a reusable package.
 
 ### Light/Dark Mode
-![bedroom-desktop-light](https://github.com/user-attachments/assets/8a186a9f-7da8-425d-9883-e282cd80b3f3)
-![bedroom-desktop-dark](https://github.com/user-attachments/assets/27da048f-8a8b-4b62-9290-4233b6e993c1)
-
+![bedroom-desktop-light](https://github.com/user-attachments/assets/370123ff-8dfb-4722-9926-522692392ef1)
+![bedroom-desktop-dark](https://github.com/user-attachments/assets/63349d15-fd3d-41be-bc00-229f8f80dd69)
 
 ## Mobile View (Light/Dark)
-<img src="https://github.com/user-attachments/assets/67b49e53-4136-4d71-836c-2b8a1ef5c830" width="400">
-<img src="https://github.com/user-attachments/assets/8bcfa79f-0064-4465-8160-07b8863cae4d" width="400">
+
+<img src="https://github.com/user-attachments/assets/5566503b-c6b0-4ede-9acc-a7da136db883" width="502">
+<img src="https://github.com/user-attachments/assets/1710ad0f-e4f2-4596-961b-3203cacd5a4a" width="502">
 
 ## Tablet View
 ![tablet-livingroom-light](https://github.com/user-attachments/assets/019693ef-3969-4104-ac5e-ded769ab3ccb)
