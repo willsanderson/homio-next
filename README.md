@@ -163,7 +163,7 @@ This is the main file you edit to map Hemma to your devices/entities.
 
 ---
 
-## Configuring your rooms
+### Configuring your rooms
 
 You’ll configure most of Hemma by editing:
 
@@ -178,8 +178,6 @@ Each view typically contains:
 - Entity grid include
 
 You’ll mostly be adjusting `variables:` on the `hemma_room` hero card and changing entity IDs in the entity grid.
-
----
 
 ### Weather widget (mobile portrait hero row)
 
@@ -202,8 +200,6 @@ Key variables:
 
 (See `dashboards/templates/button_cards/.../hemma_weather.yaml` for full template code.)
 
----
-
 ### Lock card (split actions)
 
 Hemma’s lock card supports:
@@ -214,8 +210,6 @@ Hemma’s lock card supports:
 Note: `show_icon: true` is required so `icon_tap_action` has a target.
 
 Template: `hemma_lock`
-
----
 
 ### :tv: (Optional) Media badges in the home dashboard
 
@@ -255,7 +249,7 @@ Template: `hemma_lock`
 
 ---
 
-### :pencil: Customization
+### :pencil: Additional Customization
 
 This repo is intended as a starting point:
 
