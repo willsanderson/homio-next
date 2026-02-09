@@ -7,8 +7,10 @@ Hemma:
       ha-card-background: rgba(200,200,200,0.08)
       ha-card-background-active: rgba(255,255,255,0.3)
       ha-dialog-background: rgba(255,255,255,0.1)
-      thermostat-card-off: rgba(0,0,0,.08)
-      thermostat-card-on: rgba(255,255,255,0.1)
+      hemma-control-off: rgba(0,0,0,.08)
+      hemma-control-on: rgba(255,255,255,0.1)
+      thermostat-card-off: var(--hemma-control-off)
+      thermostat-card-on: var(--hemma-control-on)
       button-card-box-shadow: var(--ha-shadow-light)
       button-card-box-shadow-active: var(--ha-shadow-light-active)
 
@@ -49,8 +51,10 @@ Hemma:
       ha-card-background-active: rgba(100,100,100,0.25)
       ha-card-background: rgba(0,0,0,0.35)
       ha-dialog-background: rgba(0,0,0,0.35)
-      thermostat-card-off: rgba(150,150,150,0.12)
-      thermostat-card-on: rgba(255,255,255,0.12)
+      hemma-control-off: rgba(150,150,150,0.12)
+      hemma-control-on: rgba(255,255,255,0.12)
+      thermostat-card-off: var(--hemma-control-off)
+      thermostat-card-on: var(--hemma-control-on)
       button-card-box-shadow: var(--ha-shadow-dark)
       button-card-box-shadow-active: var(--ha-shadow-dark-active)
 
@@ -191,7 +195,7 @@ Hemma:
   hemma-entity-name-font-mobile: 14px
   hemma-entity-state-font-mobile: 14px
   hemma-time-nudge-mobile: 8px
-  hemma-entity-icon-size-mobile: 26px
+  hemma-entity-icon-size-mobile: 28px
 
   # Entity Layout - Mobile Landscape
   hemma-entity-col-width-landscape: 200px
@@ -215,6 +219,7 @@ Hemma:
   # Entity Variables
   hemma-entity-active: rgba(255,255,255,1)
   hemma-entity-inactive: rgba(255,255,255,.75)
+  hemma-temp-puck-size: 44px
   hemma-entity-picture-inactive-opacity: .75
   hemma-entity-picture-active-opacity: 1
   hemma-entity-picture-inactive-filter: brightness(.75) saturate(.9)
@@ -407,7 +412,6 @@ Hemma:
         max-width: 100vw !important;
       }
 
-      /* Mobile Portrait - lock ALL scroll at root level */
       @media (max-width: 767px) and (orientation: portrait) {
         html, body {
           overflow: hidden !important;
@@ -459,6 +463,48 @@ Hemma:
         border: 0 !important;
         box-shadow: none !important;
         overflow: hidden !important;
+      }
+
+      /* Position more-info dialogs */
+      ha-more-info-dialog,
+      ha-dialog {
+        --vertical-align-dialog: flex-end;
+        --dialog-surface-margin-top: 15vh;
+      }
+
+      ha-more-info-dialog .mdc-dialog,
+      ha-dialog .mdc-dialog {
+        align-items: center !important;
+        justify-content: center !important;
+      }
+
+      ha-more-info-dialog .mdc-dialog__container,
+      ha-dialog .mdc-dialog__container {
+        align-items: center !important;
+        justify-content: center !important;
+        margin-top: 10vh !important;
+      }
+
+      ha-more-info-dialog .mdc-dialog__surface,
+      ha-dialog .mdc-dialog__surface {
+        margin-top: auto !important;
+        margin-bottom: auto !important;
+      }
+
+      /* Mobile - position dialogs from bottom */
+      @media (max-width: 767px) {
+        ha-more-info-dialog .mdc-dialog__container,
+        ha-dialog .mdc-dialog__container {
+          align-items: flex-end !important;
+          justify-content: flex-end !important;
+          margin-top: 0 !important;
+        }
+
+        ha-more-info-dialog .mdc-dialog__surface,
+        ha-dialog .mdc-dialog__surface {
+          margin-top: auto !important;
+          margin-bottom: 0 !important;
+        }
       }
 
       layout-card{
@@ -594,7 +640,7 @@ Hemma:
           --hemma-entity-inner-pad-current: var(--hemma-entity-inner-pad-mobile, 16px);
           --hemma-entity-name-font-current: var(--hemma-entity-name-font-mobile, 14px);
           --hemma-entity-state-font-current: var(--hemma-entity-state-font-mobile, 14px);
-          --hemma-entity-icon-size-current: var(--hemma-entity-icon-size-mobile, 26px);
+          --hemma-entity-icon-size-current: var(--hemma-entity-icon-size-mobile, 28px);
         }
 
         app-header ha-menu-button,

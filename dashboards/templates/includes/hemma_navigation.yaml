@@ -215,8 +215,6 @@ card:
           color: var(--navbar-active-color) !important;
         }
 
-        /* Show caret on Scenes button only (position 5, but nth-child(6) due to hidden DOM element)
-           Only Scenes has popup: property - see routes configuration */
         .navbar.desktop .route:nth-child(6) .label{
           gap: 6px !important;
           padding-right: 0 !important;

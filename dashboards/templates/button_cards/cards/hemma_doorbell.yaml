@@ -1,12 +1,12 @@
 hemma_doorbell:
   template:
     - hemma_entity
+  tap_action:
+    action: more-info
   show_entity_picture: true
   show_name: true
   show_state: true
   name: Doorbell
-  tap_action:
-    action: more-info
   hold_action:
     action: more-info
   styles:

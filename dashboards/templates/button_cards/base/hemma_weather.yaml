@@ -78,11 +78,11 @@ hemma_weather:
       - text-align: right
       - font-size: var(--hero-weather-sub-size, 12px)
       - font-weight: 500
-      - line-height: 1
+      - line-height: 1.2
       - margin-top: -2px
       - opacity: 0.76
       - white-space: nowrap
-      - overflow: hidden
+      - overflow: visible
       - text-overflow: ellipsis
       - max-width: 100%
 

@@ -149,7 +149,6 @@ hemma_room:
             opacity: 1 !important;
             box-shadow: inset 0 0 0 1px rgba(255,255,255,0.14) !important;
             flex-shrink: 0 !important;
-            margin-left: 3px !important;
             margin-right: 2px !important;
           }
 

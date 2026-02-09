@@ -1,13 +1,34 @@
-hemma_fan:
-  template:
-    - hemma_entity
+hemma_lock:
+  template: [hemma_entity]
 
   show_entity_picture: true
-  show_icon: true
-  show_name: true
-  show_state: true
-  name: Fan
+  show_icon: true   # <-- required so icon_tap_action actually has a target
+  show_label: false
 
+  entity_picture: |
+    [[[
+      return entity.state === 'unlocked'
+        ? '/local/hemma/icons/lock_open.svg'
+        : '/local/hemma/icons/lock.svg';
+    ]]]
+
+  state_display: |
+    [[[
+      const state = entity.state;
+      if (state === 'locked') {
+        return "Locked";
+      } else if (state === 'unlocked') {
+        return "Unlocked";
+      } else if (state === 'locking') {
+        return "Locking...";
+      } else if (state === 'unlocking') {
+        return "Unlocking...";
+      } else {
+        return "Unknown";
+      }
+    ]]]
+
+  # Tap anywhere on the card = more-info dialog
   tap_action:
     action: more-info
     entity: '[[[ return entity.entity_id ]]]'
@@ -16,9 +37,17 @@ hemma_fan:
     action: more-info
     entity: '[[[ return entity.entity_id ]]]'
 
+  # Tap ONLY the icon/picture area = toggle lock/unlock
   icon_tap_action:
-    action: toggle
+    action: call-service
+    service: |
+      [[[
+        return entity.state === 'locked' ? 'lock.unlock' : 'lock.lock';
+      ]]]
+    service_data:
+      entity_id: '[[[ return entity.entity_id ]]]'
 
+  # Optional: you can keep icon hold as more-info too
   icon_hold_action:
     action: more-info
     entity: '[[[ return entity.entity_id ]]]'
