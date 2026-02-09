@@ -211,8 +211,7 @@ Hemma’s lock card supports:
 - Tap the card → **more-info**
 - Tap the icon/image → **lock/unlock toggle**
 
-Notes:
-- `show_icon: true` is required so `icon_tap_action` has a target.
+Note: `show_icon: true` is required so `icon_tap_action` has a target.
 
 Template: `hemma_lock`
 
