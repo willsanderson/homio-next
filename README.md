@@ -20,15 +20,14 @@ Hemma is fully YAML-based and designed for:
 - **Light/dark** mode with dynamic background images
 - **Layouts + spacing logic** for scaling across different devices
 - **Custom navigation** and Scene support
-- Mobile **weather widget** in the hero row
 - Mobile navbar for tablet and phone
 - **Badges**
   - Presence + sensor badges
   - Active media player badge
 - **Button-cards**
   - Thermostat, media, fan, curtain, lock, and more
-- **Weather**
-  - **Weather widget for mobile view**
+- **Climate**
+  - **Weather widget** for mobile view
   - Supports outdoor temperature mode + room temperature mode, plus “comfort labels”
 
 ---
