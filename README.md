@@ -29,6 +29,19 @@ Hemma is fully YAML-based and designed for:
 - **Climate**
   - **Weather widget** for mobile view
   - Supports outdoor temperature mode + room temperature mode, plus “comfort labels”
+---
+
+### Light/Dark Mode
+![bedroom-desktop-light](https://github.com/user-attachments/assets/370123ff-8dfb-4722-9926-522692392ef1)
+![bedroom-desktop-dark](https://github.com/user-attachments/assets/63349d15-fd3d-41be-bc00-229f8f80dd69)
+
+### Mobile View (Light/Dark)
+<img src="https://github.com/user-attachments/assets/5566503b-c6b0-4ede-9acc-a7da136db883" width="404">
+<img src="https://github.com/user-attachments/assets/1710ad0f-e4f2-4596-961b-3203cacd5a4a" width="404">
+
+### Tablet View (Light/Dark)
+![tablet-livingroom-light](https://github.com/user-attachments/assets/019693ef-3969-4104-ac5e-ded769ab3ccb)
+![tablet-livingroom-dark](https://github.com/user-attachments/assets/ac0d1d67-0e6e-4cdb-8627-c1db13cfce13)
 
 ---
 ### Requirements
@@ -45,22 +58,6 @@ Install via HACS (recommended) unless noted:
 
 #### Optional (but recommended)
 - **[kiosk-mode](https://github.com/NemesisRE/kiosk-mode)** (NemesisRE) - Dashboard is designed specifically for no header or sidebar
-
----
-
-### Light/Dark Mode
-![bedroom-desktop-light](https://github.com/user-attachments/assets/370123ff-8dfb-4722-9926-522692392ef1)
-![bedroom-desktop-dark](https://github.com/user-attachments/assets/63349d15-fd3d-41be-bc00-229f8f80dd69)
-
-### Mobile View (Light/Dark)
-<img src="https://github.com/user-attachments/assets/5566503b-c6b0-4ede-9acc-a7da136db883" width="404">
-<img src="https://github.com/user-attachments/assets/1710ad0f-e4f2-4596-961b-3203cacd5a4a" width="404">
-
-### Tablet View (Light/Dark)
-![tablet-livingroom-light](https://github.com/user-attachments/assets/019693ef-3969-4104-ac5e-ded769ab3ccb)
-![tablet-livingroom-dark](https://github.com/user-attachments/assets/ac0d1d67-0e6e-4cdb-8627-c1db13cfce13)
-
----
 
 ### :file_folder: Folder layout
 
