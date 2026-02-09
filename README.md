@@ -165,7 +165,7 @@ This is the main file you edit to map Hemma to your devices/entities.
 
 ## :pencil: Configuring your rooms
 
-You’ll configure most of Hemma by editing:
+You’ll configure most of Hemma by editing your dashboard file:
 
 - `/config/dashboards/hemma/hemma.yaml`
 
@@ -211,7 +211,7 @@ Note: `show_icon: true` is required so `icon_tap_action` has a target.
 
 Template: `hemma_lock`
 
-### :tv: (Optional) Media badges in the home dashboard
+### :tv: Media badges in the home dashboard
 
 - The home dashboard can show active media player badges in the header.
 - To enable the media badges, locate the `name: Home` view in the `hemma.yaml` dashboard file and add the media variables under `variables:` (example below):
