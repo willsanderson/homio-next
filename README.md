@@ -29,7 +29,7 @@ Hemma is fully YAML-based and designed for:
   - Thermostat, media, fan, curtain, lock, and more
 - **Weather**
   - **Weather widget for mobile view**
-  - Supports outdoor temperature mode + room temperature mode, plus “comfort labels” with `temp_unit: 'F'|'C'`
+  - Supports outdoor temperature mode + room temperature mode, plus “comfort labels”
 
 ---
 ## Requirements
